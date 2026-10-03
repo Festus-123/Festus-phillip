@@ -1,6 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next';
 import Hero_page from '@/components/hero/Hero_page'
+import Homepage from '@/components/hero/homepage'
+import Logo from "@/components/hero/logo";
 // import Sidebar from '@/components/sidebar/Sidebar'
 // import WorkspaceScene from '@/components/3d/scenes/WorkspaceScene';
 
@@ -42,8 +44,8 @@ const Portfolio = async () => {
 
   return (
     <div className=''>
-      {/* <WorkspaceScene /> */}
-      <Hero_page />
+      <Homepage />
+      <Logo />
     </div>
   )
 }
