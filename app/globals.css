@@ -1,22 +1,300 @@
 @import "tailwindcss";
 
+/* DESIGN TOKENS */
+
 :root {
-  --font-changa-one: var(--font-changa-one);
-  --font-jaro: var(--font-jaro);
-  --font-poppins: var(--font-poppins);
-  --font-oswald: var(--font-oswald);
-  
+  /* ---------- Typography ---------- */
+
+  --font-satoshi: var(--font-satoshi);
+  --font-general-sans: var(--font-general-sans);
+
+  /* ---------- Cream ---------- */
+
+  --color-cream: #fdf4e1;
+  --color-cream-light: #faf7ef;
+  --color-cream-dark: #e5dccb;
+
+  /* ---------- Ink ---------- */
+
+  --color-ink: #111827;
+  --color-ink-soft: #293448;
+
+  /* ---------- Blue ---------- */
+
+  --color-blue-dark: #123b91;
+  --color-blue: #245bff;
+  --color-blue-bright: #4f7cff;
+
+  /* ---------- Gold ---------- */
+
+  --color-gold-dark: #a77b22;
+  --color-gold: #d6a936;
+  --color-gold-light: #f0ce6a;
+
+  /* ---------- White ---------- */
+
+  --color-white: #ffffff;
+  --color-white-soft: #f7f7f5;
+
+  /* ---------- Muted ---------- */
+
+  --color-muted: #6f7785;
+  --color-muted-light: #969daa;
+
+  /* ---------- Borders ---------- */
+
+  --border-ink: #111827;
+  --border-blue: #123b91;
+  --border-blue-bright: #245bff;
+  --border-gold: #d6a936;
+  --border-cream: #ddd3c1;
+
+  /* ---------- Glass ---------- */
+
+  --glass-cream: rgba(250, 247, 239, 0.68);
+  --glass-white: rgba(255, 255, 255, 0.55);
+  --glass-blue: rgba(36, 91, 255, 0.08);
+
+  /* ---------- Shadows ---------- */
+
+  --shadow-card: rgba(17, 24, 39, 0.14);
+  --shadow-blue: rgba(36, 91, 255, 0.22);
+  --shadow-gold: rgba(214, 169, 54, 0.2);
 }
+
+/* BASE */
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-general-sans), sans-serif;
+}
+
+/* TYPOGRAPHY */
+
+.font-satoshi {
+  font-family: var(--font-satoshi), sans-serif;
+}
+
+.font-general {
+  font-family: var(--font-general-sans), sans-serif;
+}
+
+/* BACKGROUNDS */
+
+.bg-cream {
+  background: var(--color-cream);
+}
+
+.bg-cream-light {
+  background: var(--color-cream-light);
+}
+
+.bg-cream-dark {
+  background: var(--color-cream-dark);
+}
+
+.bg-ink {
+  background: var(--color-ink);
+}
+
+.bg-blue {
+  background: var(--color-blue);
+}
+
+.bg-gold {
+  background: var(--color-gold);
+}
+
+/* ATMOSPHERIC BACKGROUND */
+
+.bg-atmosphere {
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(36, 91, 255, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(214, 169, 54, 0.08),
+      transparent 25%
+    ),
+    var(--color-cream);
+}
+
+/* BRAND GRADIENTS */
+
+/* BLUE GRADIENT */
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-blue-dark),
+    var(--color-blue),
+    var(--color-blue-bright)
+  );
+}
+
+/* BLUE TO GOLD */
+
+.bg-brand-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-blue-dark),
+    var(--color-blue) 65%,
+    var(--color-gold)
+  );
+}
+
+/* GOLD GRADIENT */
+
+.bg-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-dark),
+    var(--color-gold-light)
+  );
+}
+
+/* TEXT */
+
+.text-primary {
+  color: var(--color-ink);
+}
+
+.text-secondary {
+  color: var(--color-ink-soft);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-muted-light {
+  color: var(--color-muted-light);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-gold-light {
+  color: var(--color-gold-light);
+}
+
+/* GRADIENT TEXT */
+
+.text-brand-gradient {
+  background: linear-gradient(
+    110deg,
+    var(--color-blue-dark),
+    var(--color-blue) 60%,
+    var(--color-gold)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* BORDERS */
+
+.border-ink {
+  border-color: var(--border-ink);
+}
+
+.border-blue {
+  border-color: var(--border-blue);
+}
+
+.border-blue-bright {
+  border-color: var(--border-blue-bright);
+}
+
+.border-gold {
+  border-color: var(--border-gold);
+}
+
+.border-cream {
+  border-color: var(--border-cream);
+}
+
+/* ANIME / TRADING CARD SYSTEM */
+
+.card-offset {
+  border: 2px solid var(--color-ink);
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.card-offset-blue {
+  border: 2px solid var(--color-blue-dark);
+  box-shadow: 6px 6px 0 var(--color-blue-dark);
+}
+
+.card-offset-gold {
+  border: 2px solid var(--color-gold-dark);
+  box-shadow: 6px 6px 0 var(--color-gold-dark);
+}
+
+/* GLASS */
+
+.glass {
+  background: var(--glass-cream);
+  border: 1px solid rgba(17, 24, 39, 0.1);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-white {
+  background: var(--glass-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-blue {
+  background: var(--glass-blue);
+  border: 1px solid rgba(36, 91, 255, 0.18);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* GLOW */
+
+.glow-blue {
+  box-shadow: 0 0 30px var(--shadow-blue);
+}
+
+.glow-blue-strong {
+  box-shadow: 0 0 50px var(--shadow-blue);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px var(--shadow-gold);
+}
+
+/* SCROLLBAR */
+
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* .hide-scrollbar  */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -25,7 +303,10 @@ body::-webkit-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.font-style {
-    font-family: var(--font-jaro);
-    font-weight: 1000px;
+
+/* SELECTION */
+
+::selection {
+  background: var(--color-blue);
+  color: var(--color-white);
 }

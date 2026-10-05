@@ -1,5 +1,5 @@
-import React from 'react'
-import LoadingPage from '@/components/main-sites/Loading'
+import React from 'react';
+import LoadingPage from '@/animations/transitions/loading/LoadingTransition';
 
 const loading = () => {
   return (

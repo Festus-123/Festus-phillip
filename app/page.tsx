@@ -1,10 +1,12 @@
 import React from 'react'
 import { Metadata } from 'next';
-import Hero_page from '@/components/hero/Hero_page'
-import Homepage from '@/components/hero/homepage'
-import Logo from "@/components/hero/logo";
+// import Hero_page from '@/components/hero/Hero_page'
+import Hero from '@/components/hero/Hero'
+import Introduction from '@/components/intro/Introduction';
+import SelectedWorks from '@/components/project-preview/SelectedWorks';
+import Skills from '@/components/skills/skills';
+// import Logo from "@/components/hero/logo";
 // import Sidebar from '@/components/sidebar/Sidebar'
-// import WorkspaceScene from '@/components/3d/scenes/WorkspaceScene';
 
 export const metadata: Metadata = {
   title: "Festus Phillip Adebola https://festus-s-portfolio.vercel.app",
@@ -44,8 +46,11 @@ const Portfolio = async () => {
 
   return (
     <div className=''>
-      <Homepage />
-      <Logo />
+      <Hero />
+      <Introduction />
+      <SelectedWorks />
+      <Skills />
+      {/* <Logo /> */}
     </div>
   )
 }
