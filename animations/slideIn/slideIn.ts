@@ -16,10 +16,11 @@ export function slideIn(
   } = options;
 
   const config = slideInVariant[variant];
+  const { x, y } = config as { x?: number; y?: number };
 
   return gsap.from(target, {
-    x: config.x,
-    y: config.y,
+    x,
+    y,
     duration: config.duration,
     ease: config.ease,
     delay,

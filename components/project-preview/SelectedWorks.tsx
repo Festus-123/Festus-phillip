@@ -78,7 +78,7 @@ const SelectedWorks = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-cream px-6 py-24 md:px-12 md:py-32 lg:px-20 border-t border-ink/50"
+      className="bg-cream px-6 py-24 md:px-12 md:py-32 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
@@ -90,7 +90,7 @@ const SelectedWorks = () => {
 
             <h2
               data-works-heading
-              className="font-satoshi text-5xl font-bold leading-normal tracking-tight text-ink md:text-7xl lg:text-8xl"
+              className="font-satoshi text-5xl font-bold leading-[1.15] tracking-tight text-ink md:text-7xl lg:text-8xl"
             >
               Things I&apos;ve built,
               <br />
