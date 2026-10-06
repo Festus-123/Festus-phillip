@@ -268,7 +268,7 @@ const Contact = () => {
                   >
                     <span className="flex flex-col items-center gap-1 font-satoshi text-2xl font-bold uppercase tracking-wider">
                       {loading ? (
-                        <FiSend className="text-[clamp(1.5rem,2.5vw,4rem)] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 hover:drop-shadow-2xl text-blue cursor-pointer" />
+                        <FiSend className="text-[clamp(1.5rem,2.5vw,4rem)] transition-transform duration-300 translate-x-3 translate-y-3 text-blue cursor-not-allowed" />
                       ) : (
                         <>
                           <FiSend className="text-[clamp(1.5rem,2.5vw,4rem)] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 hover:drop-shadow-2xl text-gold hover:text-blue " />

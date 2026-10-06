@@ -8,6 +8,7 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Contact_Preview from "@/components/contact-preview/Contact_Preview";
 import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact-preview/Contact";
+import DirBar from "@/components/sidebar/DirBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,7 +95,8 @@ export default function RootLayout({
       >
         <Toaster position="bottom-right" theme="system" />
 
-        <Sidebar />
+        {/* <Sidebar /> */}
+        <DirBar />
         <PageTransition>{children}</PageTransition>
         <Contact />
         {/* <Contact_Preview /> */}

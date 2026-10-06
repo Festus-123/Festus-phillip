@@ -179,7 +179,7 @@ const Introduction = () => {
             loading="lazy"
             width={1200}
             height={700}
-            className="h-auto w-full grayscale transition-all duration-500 hover:grayscale-0"
+            className="h-auto aspect-square sm:aspect-video md:w-full grayscale transition-all duration-500 hover:grayscale-0"
           />
 
           {/* Simulation panel */}
