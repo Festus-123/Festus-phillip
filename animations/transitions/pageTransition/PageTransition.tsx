@@ -2,25 +2,25 @@
 
 import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-import { pageTransition }  from "@/animations/pageTransition/pageTransition";
+import { pageTransition } from "@/animations/pageTransition/pageTransition";
 import { personal } from "@/data/mydata";
 
-const PageTransition = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+const PageTransition = ({ children }: { children: React.ReactNode }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const [isTransitionComplete, setIsTransitionComplete] = useState(false);
 
   useGSAP(
     () => {
       if (!containerRef.current) return;
 
+      setIsTransitionComplete(false);
+
       pageTransition(containerRef.current, {
         variant: "playful",
+        onComplete: () => setIsTransitionComplete(true),
       });
     },
     {
@@ -32,16 +32,10 @@ const PageTransition = ({
   return (
     <div ref={containerRef} className="relative">
       {/* Ink */}
-      <div
-        data-transition-curtain
-        className="fixed inset-0 z-9999 bg-ink"
-      />
+      <div data-transition-curtain className="fixed inset-0 z-9999 bg-ink" />
 
       {/* Gold */}
-      <div
-        data-transition-curtain
-        className="fixed inset-0 z-10000 bg-gold"
-      />
+      <div data-transition-curtain className="fixed inset-0 z-10000 bg-gold" />
 
       {/* Blue */}
       <div
@@ -51,7 +45,7 @@ const PageTransition = ({
         {personal.firstName}
       </div>
 
-      {children}
+      {isTransitionComplete && children}
     </div>
   );
 };

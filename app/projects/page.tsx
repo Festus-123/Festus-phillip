@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Projects from '@/components/main-sites/MainProjects';
+import ProjectPage from '@/components/projects/Project';
 
 export const metadata: Metadata = {
   title: "Festus Phillip Adebola https://festus-s-portfolio.vercel.app",
@@ -40,7 +41,8 @@ const page = async () => {
 
   return (
     <div>
-      <Projects />
+      {/* <Projects /> */}
+      <ProjectPage />
     </div>
   )
 }

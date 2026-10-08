@@ -1,14 +1,28 @@
+export type ProjectType =
+  | "frontend"
+  | "backend"
+  | "mobile"
+  | "fullstack"
+  | "automation"
+  | "experiment";
+
+export type ProjectStatus =
+  | "Live"
+  | "In Development"
+  | "Archived";
+
 export type Project = {
   slug: string;
   name: string;
   image: string;
 
+  type: ProjectType;
+  category: string;
+  year: string;
+
   site?: string;
   github_site?: string;
   github: string;
-
-  category: string;
-  year: string;
 
   stacks: string[];
 
@@ -20,21 +34,65 @@ export type Project = {
   highlights: string[];
   features: string[];
 
-  status: "Live" | "In Development" | "Archived";
+  status: ProjectStatus;
 };
 
+export type PROJECTSECTION = {
+  type: string;
+  title: string;
+  description: string;
+}
+
+export const projectSections: PROJECTSECTION[] = [
+    {
+      type: "fullstack",
+      title: "Full-stack",
+      description:
+        "Products where I worked across the interface, application logic, data, and the systems connecting everything together.",
+    },
+    {
+      type: "frontend",
+      title: "Frontend",
+      description:
+        "Interfaces focused on responsive layouts, interaction, animation, and turning ideas into polished digital experiences.",
+    },
+    {
+      type: "backend",
+      title: "Backend",
+      description:
+        "Server-side systems, APIs, data flows, authentication, and the logic that keeps applications running behind the interface.",
+    },
+    {
+      type: "mobile",
+      title: "Mobile",
+      description:
+        "Mobile experiences built around practical interfaces, application logic, and the constraints of smaller screens.",
+    },
+    {
+      type: "automation",
+      title: "Automation",
+      description:
+        "Tools and experiments built to automate repetitive work, process information, or explore new technical ideas.",
+    },
+  ]
+
 export const links: Project[] = [
+  // =========================================================
+  // FRONTEND / WEB
+  // =========================================================
+
   {
     slug: "tax-master",
     name: "Tax Master",
     image: "/tax-master.png",
 
+    type: "frontend",
+    category: "Web Application",
+    year: "2025",
+
     site: "https://tax-master.vercel.app/",
     github_site: "https://github.com/Festus-123/Tax-Master",
     github: "/github.jpg",
-
-    category: "Web Application",
-    year: "2026",
 
     stacks: [
       "React.js",
@@ -50,7 +108,7 @@ export const links: Project[] = [
       "Making tax calculations less intimidating and easier to understand.",
 
     description:
-      "Tax Master is a Nigerian tax estimation tool built to make tax calculations easier for everyday users. Instead of forcing users to work through complicated formulas, the application turns the process into a simple guided experience where users provide their financial information and receive an understandable estimate of their tax obligations.",
+      "Tax Master is a Nigerian tax estimation tool built to make tax calculations easier for everyday users. Instead of forcing users through complicated formulas, the application turns the process into a simple guided experience where users provide their financial information and receive an understandable estimate of their tax obligations.",
 
     role:
       "Designed and developed the frontend, calculation flow, responsive interface, result presentation, and user interaction system.",
@@ -75,69 +133,17 @@ export const links: Project[] = [
   },
 
   {
-    slug: "mkclothing",
-    name: "M & K Clothing",
-    image: "/mk-clothing3.png",
-
-    site: "https://mkclothing-kna2.vercel.app/",
-    github_site: "https://github.com/Festus-123/mkclothing",
-    github: "/github.jpg",
-
-    category: "E-commerce",
-    year: "2026",
-
-    stacks: [
-      "React",
-      "JavaScript",
-      "Supabase",
-      "Tailwind CSS",
-      "Responsive Design",
-      "Dynamic UI",
-      "Framer Motion",
-      "Sonner",
-      "Render",
-    ],
-
-    tagline:
-      "A clothing storefront backed by a real product management system.",
-
-    description:
-      "M & K Clothing started as a storefront concept and grew into a functional e-commerce experience with dynamic product data. The application connects the customer-facing store to a management dashboard, allowing products and collections to be created, updated, and removed without having to manually change the frontend.",
-
-    role:
-      "Designed and developed the customer storefront, product flows, responsive UI, Supabase integration, and dashboard functionality.",
-
-    highlights: [
-      "Connected the storefront to Supabase for dynamic product and collection data.",
-      "Built an administrative dashboard for managing clothing products and collections.",
-      "Created reusable product and collection interfaces instead of hardcoding storefront content.",
-      "Added responsive interactions and motion to make browsing feel more polished.",
-    ],
-
-    features: [
-      "Dynamic product catalogue",
-      "Product management dashboard",
-      "Collection management",
-      "Supabase database integration",
-      "Responsive shopping interface",
-      "Interactive product browsing",
-      "Notifications and feedback",
-    ],
-
-    status: "Live",
-  },
-
-  {
     slug: "phipest-bens",
     name: "Phipest-Bens International",
     image: "/phipest-bens2.png",
 
+    type: "frontend",
+    category: "Business Website",
+    year: "2026",
+
     site: "https://phipest-bens.vercel.app/",
     github_site: "https://github.com/Festus-123/phipest-bens",
     github: "/github.jpg",
-
-    category: "Business Website",
-    year: "2026",
 
     stacks: [
       "Next.js",
@@ -151,7 +157,7 @@ export const links: Project[] = [
       "Turning a multi-service company into a clear digital presence.",
 
     description:
-      "Phipest-Bens International is a company operating across areas including construction and automobile sales. The challenge was not simply creating a website, but organizing several different services into an experience that visitors could understand quickly. The result is a responsive company website focused on clarity, presentation, and making enquiries easier.",
+      "Phipest-Bens International is a company operating across areas including construction and automobile sales. The challenge was not simply creating a website, but organizing several different services into an experience that visitors could understand quickly.",
 
     role:
       "Designed and developed the complete frontend experience, including page structure, responsive layouts, animations, service presentation, and enquiry flow.",
@@ -181,12 +187,13 @@ export const links: Project[] = [
     name: "Weslime Auto Repair",
     image: "/weslime.png",
 
+    type: "frontend",
+    category: "Business Website",
+    year: "2026",
+
     site: "https://weslime.vercel.app/",
     github_site: "https://github.com/Festus-123/weslime",
     github: "/github.jpg",
-
-    category: "Business Website",
-    year: "2026",
 
     stacks: [
       "Next.js",
@@ -200,7 +207,7 @@ export const links: Project[] = [
       "A digital front door for an automotive service business.",
 
     description:
-      "Weslime Auto Repair provides services ranging from vehicle repairs and car washing to car parts and other automotive needs. The website was built to give the business a professional online presence while making it easier for customers to discover available services, understand what the company offers, and make enquiries or appointments.",
+      "Weslime Auto Repair provides services ranging from vehicle repairs and car washing to car parts and other automotive needs. The website was built to give the business a professional online presence while making it easier for customers to discover available services and make enquiries.",
 
     role:
       "Designed and developed the website structure, responsive interface, service sections, enquiry experience, and supporting interactions.",
@@ -230,13 +237,14 @@ export const links: Project[] = [
     name: "CoolChef Nationwide Eats",
     image: "/coolchef.png",
 
+    type: "frontend",
+    category: "Food & Restaurant",
+    year: "2026",
+
     site: "https://coolchef-nationwide-eats.vercel.app/",
     github_site:
       "https://github.com/Festus-123/coolchef-nationwide-eats",
     github: "/github.jpg",
-
-    category: "Food & Restaurant",
-    year: "2026",
 
     stacks: [
       "React.js",
@@ -250,7 +258,7 @@ export const links: Project[] = [
       "A food-focused experience built around discovering what to eat.",
 
     description:
-      "CoolChef Nationwide Eats is a restaurant-focused website designed around food discovery and presentation. The interface brings recipes, dishes, and cooking content into one responsive experience, making it easy for visitors to browse meals and explore the content without getting lost in unnecessary complexity.",
+      "CoolChef Nationwide Eats is a restaurant-focused website designed around food discovery and presentation. The interface brings recipes, dishes, and cooking content into one responsive experience, making it easy for visitors to browse meals and explore the content without unnecessary complexity.",
 
     role:
       "Designed and developed the frontend experience, responsive layouts, recipe presentation, and interactive UI elements.",
@@ -274,17 +282,76 @@ export const links: Project[] = [
     status: "Live",
   },
 
+  // =========================================================
+  // FULLSTACK / E-COMMERCE
+  // =========================================================
+
+  {
+    slug: "mkclothing",
+    name: "M & K Clothing",
+    image: "/mk-clothing3.png",
+
+    type: "fullstack",
+    category: "E-commerce",
+    year: "2025",
+
+    site: "https://mkclothing-kna2.vercel.app/",
+    github_site: "https://github.com/Festus-123/mkclothing",
+    github: "/github.jpg",
+
+    stacks: [
+      "React",
+      "JavaScript",
+      "Supabase",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Dynamic UI",
+      "Framer Motion",
+      "Sonner",
+      "Render",
+    ],
+
+    tagline:
+      "A clothing storefront backed by a real product management system.",
+
+    description:
+      "M & K Clothing started as a storefront concept and grew into a functional e-commerce experience with dynamic product data. The application connects the customer-facing store to a management dashboard, allowing products and collections to be created, updated, and removed without manually changing the frontend.",
+
+    role:
+      "Designed and developed the customer storefront, product flows, responsive UI, Supabase integration, and dashboard functionality.",
+
+    highlights: [
+      "Connected the storefront to Supabase for dynamic product and collection data.",
+      "Built an administrative dashboard for managing clothing products and collections.",
+      "Created reusable product and collection interfaces instead of hardcoding storefront content.",
+      "Added responsive interactions and motion to make browsing feel more polished.",
+    ],
+
+    features: [
+      "Dynamic product catalogue",
+      "Product management dashboard",
+      "Collection management",
+      "Supabase database integration",
+      "Responsive shopping interface",
+      "Interactive product browsing",
+      "Notifications and feedback",
+    ],
+
+    status: "Live",
+  },
+
   {
     slug: "wear-it-all-luxury",
     name: "Wear It All Luxury",
     image: "/wear-it-all2.png",
 
+    type: "fullstack",
+    category: "E-commerce",
+    year: "2026",
+
     site: "https://wearitallluxury.vercel.app/",
     github_site: "https://github.com/Festus-123/wearitallluxury",
     github: "/github.jpg",
-
-    category: "E-commerce",
-    year: "2026",
 
     stacks: [
       "React",
@@ -327,4 +394,337 @@ export const links: Project[] = [
 
     status: "Live",
   },
+
+  // =========================================================
+  // BACKEND
+  // =========================================================
+
+  {
+    slug: "reminder-api",
+    name: "Reminder API",
+    image: "R",
+
+    type: "backend",
+    category: "REST API",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "PostgreSQL",
+    ],
+
+    tagline: "An API for creating and managing reminders.",
+    description:
+      "Reminder API is a backend service designed to help users create, update, and manage reminders. It provides a structured and reusable REST API for reminder-related operations.",
+    role:
+      "Designed and developed the API, data model, business logic, and backend service structure.",
+
+    highlights: [
+      "Built a REST API for reminder creation and management.",
+      "Structured the backend around reusable routes and controllers.",
+      "Implemented persistent data storage with PostgreSQL.",
+    ],
+
+    features: [
+      "REST API",
+      "Reminder management",
+      "Data persistence",
+      "CRUD operations",
+      "Backend validation",
+    ],
+
+    status: "Live",
+  },
+
+  {
+    slug: "ticketpass-api",
+    name: "TicketPass API",
+    image: "TCP",
+
+    type: "backend",
+    category: "Event Ticketing API",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "PostgreSQL",
+    ],
+
+    tagline: "A backend for booking and managing event tickets.",
+    description:
+      "TicketPass API is an event ticketing backend that supports ticket booking and related event-management operations. It provides the API foundation for an application focused on making event ticket transactions organized and accessible.",
+    role:
+      "Designed and developed the ticketing API, booking flow, data model, and application backend logic.",
+
+    highlights: [
+      "Built an API for booking tickets to events.",
+      "Structured event and ticket data for reliable backend operations.",
+      "Created a reusable backend foundation for ticket-related features.",
+    ],
+
+    features: [
+      "Event ticket booking",
+      "Ticket management",
+      "REST API",
+      "Database integration",
+      "Backend business logic",
+    ],
+
+    status: "Live",
+  },
+
+  {
+    slug: "campus-lost-and-found-api",
+    name: "Campus Lost & Found API",
+    image: "CLF",
+
+    type: "backend",
+    category: "REST API",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "PostgreSQL",
+    ],
+
+    tagline: "A backend for reporting and resolving lost campus items.",
+    description:
+      "Campus Lost & Found API is a backend service for reporting lost items, recording found items, and managing related records within a campus community. It provides a structured API for handling item reports and status updates.",
+    role:
+      "Designed and developed the API, reporting workflow, data model, and backend service logic.",
+
+    highlights: [
+      "Built an API for reporting lost and found items.",
+      "Supported structured records for item listings and updates.",
+      "Created a reusable backend workflow for campus item management.",
+    ],
+
+    features: [
+      "Lost item reports",
+      "Found item records",
+      "Item status management",
+      "REST API",
+      "Database integration",
+    ],
+
+    status: "Live",
+  },
+
+  // =========================================================
+  // MOBILE
+  // =========================================================
+
+  {
+    slug: "medical-health-track",
+    name: "Medical Health Track",
+    image: "/project-image.png",
+
+    type: "mobile",
+    category: "Mobile Application",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "SQLite",
+    ],
+
+    tagline: "A mobile app for tracking health routines and medical information.",
+    description:
+      "Medical Health Track is a mobile application designed to help users organize health-related information, monitor daily wellness habits, and keep useful medical details in one place.",
+    role:
+      "Designed and developed the mobile interface, health tracking workflow, data organization, and app experience.",
+
+    highlights: [
+      "Built a mobile experience for managing health-related records.",
+      "Created a streamlined interface for tracking daily wellness activities.",
+      "Organized medical information in an accessible and user-friendly format.",
+    ],
+
+    features: [
+      "Health tracking",
+      "Medical information management",
+      "Daily wellness routines",
+      "Mobile interface",
+      "Local data storage",
+    ],
+
+    status: "Live",
+  },
+
+  {
+    slug: "reminder-app",
+    name: "Reminder App",
+    image: "/project-image.png",
+
+    type: "mobile",
+    category: "Mobile Application",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "AsyncStorage",
+    ],
+
+    tagline: "A mobile app for creating and managing reminders.",
+    description:
+      "Reminder App is a mobile application for creating, viewing, and managing reminders. It provides a simple interface for organizing personal tasks and time-sensitive activities.",
+    role:
+      "Designed and developed the mobile interface, reminder workflow, and persistent local data handling.",
+
+    highlights: [
+      "Built a clean reminder creation and management experience.",
+      "Used local storage to keep reminder data available on the device.",
+      "Designed the app for quick access and simple task organization.",
+    ],
+
+    features: [
+      "Create reminders",
+      "Manage reminders",
+      "Local persistence",
+      "Mobile-friendly interface",
+      "Task organization",
+    ],
+
+    status: "Live",
+  },
+
+  {
+    slug: "campus-lost-and-found-mobile",
+    name: "Campus Lost & Found",
+    image: "/project-image.png",
+
+    type: "mobile",
+    category: "Mobile Application",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "REST API",
+    ],
+
+    tagline: "A mobile way to report and resolve lost campus items.",
+    description:
+      "Campus Lost & Found is a mobile application that allows users to report lost items, record found items, and follow the status of related cases within a campus community.",
+    role:
+      "Designed and developed the mobile interface, reporting workflow, item-status experience, and API integration.",
+
+    highlights: [
+      "Built a mobile workflow for reporting lost and found items.",
+      "Created an accessible interface for tracking item status.",
+      "Connected the app to a backend service for reliable record management.",
+    ],
+
+    features: [
+      "Report lost items",
+      "Record found items",
+      "Track item status",
+      "Mobile interface",
+      "API integration",
+    ],
+
+    status: "Live",
+  },
+
+  // =========================================================
+  // AUTOMATION / PYTHON
+  // =========================================================
+
+  // I prefer "Automation" as the project type rather than
+  // "Python", because Python is the technology, not the purpose.
+  //
+  {
+    slug: "logforge",
+    name: "LOGFORGE",
+    image: "/project-image.png",
+
+    type: "automation",
+    category: "Automation",
+    year: "2025",
+
+    github: "/github.jpg",
+
+    stacks: [
+      "Python",
+      "NumPy",
+      "argparse",
+      "Command-line Automation",
+    ],
+
+    tagline: "A Python-based command-line tool for automated log processing.",
+    description:
+      "LOGFORGE is a Python automation project built to process and organize log data through a command-line interface. It uses Python libraries to support efficient data handling and configurable automation workflows.",
+    role:
+      "Designed and developed the automation workflow, command-line interface, data processing logic, and project structure.",
+
+    highlights: [
+      "Built a Python-based automation tool for log processing.",
+      "Used argparse to create a flexible command-line interface.",
+      "Used NumPy for efficient numerical data handling and processing.",
+    ],
+
+    features: [
+      "Log processing",
+      "Command-line interface",
+      "Python automation",
+      "NumPy integration",
+      "Configurable workflows",
+    ],
+
+    status: "Live",
+  },
+
+  // =========================================================
+  // EXPERIMENTS
+  // =========================================================
+
+  // {
+  //   slug: "project-name",
+  //   name: "Project Name",
+  //   image: "/project-image.png",
+  //
+  //   type: "experiment",
+  //   category: "Experiment",
+  //   year: "2026",
+  //
+  //   github_site: "https://github.com/...",
+  //   github: "/github.jpg",
+  //
+  //   stacks: [],
+  //
+  //   tagline: "...",
+  //   description: "...",
+  //   role: "...",
+  //
+  //   highlights: [],
+  //   features: [],
+  //
+  //   status: "Archived",
+  // },
 ];
