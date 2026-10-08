@@ -97,8 +97,10 @@ export default function RootLayout({
 
         {/* <Sidebar /> */}
         <DirBar />
-        <PageTransition>{children}</PageTransition>
-        <Contact />
+        <PageTransition>
+          <>{children}
+          <Contact /></>
+        </PageTransition>
         {/* <Contact_Preview /> */}
         {/* <Footer /> */}
       </body>

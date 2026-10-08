@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { skillCategories } from "@/data/skills";
 import { cardHover, floating, stagger, textReveal } from "@/animations";
 
-const Skills = () => {
+const SkillsIntro = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -192,4 +192,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsIntro;

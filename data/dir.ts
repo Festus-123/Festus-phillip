@@ -28,28 +28,23 @@ export const dirItems: DirItem[] = [
     href: "/about",
     icon: BriefcaseBusiness,
   },
-  {
-    id: "tools",
-    label: "Tools",
-    href: "/tools",
-    icon: Wrench,
-  },
+
   {
     id: "projects",
     label: "Projects",
     href: "/projects",
     icon: FolderKanban,
   },
-  {
-    id: "stories",
-    label: "Stories",
-    href: "/stories",
-    icon: Sparkles,
-  },
+  // {
+  //   id: "stories",
+  //   label: "Stories",
+  //   href: "/stories",
+  //   icon: Sparkles,
+  // },
   {
     id: "resume",
     label: "Resume",
-    href: "/resume",
+    href: "https://drive.google.com/file/d/1WSZxkFv-kPar1Xi6hqVHTXKWwCSNa8mX/view?usp=drive_link",
     icon: FileText,
   },
   {

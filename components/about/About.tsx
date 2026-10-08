@@ -320,7 +320,7 @@ const About = () => {
 
           <a
             data-about-resume
-            href="https://drive.google.com/file/d/1TVMUCl-87MpxEpfWkhQ_oLjU5XwdR_RY/view?usp=sharing"
+            href="https://drive.google.com/file/d/1WSZxkFv-kPar1Xi6hqVHTXKWwCSNa8mX/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 self-start border-2 border-ink bg-ink px-6 py-4 font-satoshi text-sm font-bold uppercase tracking-wider text-white md:self-auto"
