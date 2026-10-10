@@ -52,19 +52,19 @@ export const projectSections: PROJECTSECTION[] = [
     },
     {
       type: "frontend",
-      title: "Frontend",
+      title: "Front-end",
       description:
         "Interfaces focused on responsive layouts, interaction, animation, and turning ideas into polished digital experiences.",
     },
     {
       type: "backend",
-      title: "Backend",
+      title: "Back-end",
       description:
         "Server-side systems, APIs, data flows, authentication, and the logic that keeps applications running behind the interface.",
     },
     {
       type: "mobile",
-      title: "Mobile",
+      title: "Mobile-app",
       description:
         "Mobile experiences built around practical interfaces, application logic, and the constraints of smaller screens.",
     },

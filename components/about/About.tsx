@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import { assets } from "@/assets/asset";
+import { assets } from "@/public/assets/asset";
 import { useRouter } from "next/navigation";
 
 import { about, codeIntro, dreams, hobbies, personal } from "@/data/mydata";
@@ -100,7 +100,7 @@ const About = () => {
   const handleSimulationComplete = () => {
     window.setTimeout(() => {
       router.push("#contact");
-      setCoding(false)
+      setCoding(false);
     }, 2000);
   };
 
@@ -184,11 +184,9 @@ const About = () => {
                 <span className="font-satoshi font-bold text-ink">Hi 👋.</span>{" "}
                 {about.long[0]}
               </p>{" "}
-              <br /> 
               <br />
-              <p>
-                {about.long[1]} 
-              </p>
+              <br />
+              <p>{about.long[1]}</p>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -306,7 +304,6 @@ const About = () => {
               () {"=>"} setCoding(true);
             </button>
           </div>
-
         </div>
 
         {/* =========================================================

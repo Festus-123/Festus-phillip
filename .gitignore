@@ -45,7 +45,7 @@ next-env.d.ts
 *.glb
 
 # fonts
-/assets/fonts/Satoshi_Complete/*
-/assets/fonts/GeneralSans_Complete/*
+/public/assets/fonts/Satoshi_Complete/*
+/public/assets/fonts/GeneralSans_Complete/*
 
 

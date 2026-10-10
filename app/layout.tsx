@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 const satoshi = localFont({
   src: [
     {
-      path: "../assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2",
+      path: "../public/assets/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2",
       weight: "300 900",
       style: "normal",
     },
@@ -34,7 +34,7 @@ const satoshi = localFont({
 const generalSans = localFont({
   src: [
     {
-      path: "../assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
+      path: "../public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
       weight: "200 700",
       style: "normal",
     },
@@ -98,8 +98,10 @@ export default function RootLayout({
         {/* <Sidebar /> */}
         <DirBar />
         <PageTransition>
-          <>{children}
-          <Contact /></>
+          <>
+            {children}
+            <Contact />
+          </>
         </PageTransition>
         {/* <Contact_Preview /> */}
         {/* <Footer /> */}

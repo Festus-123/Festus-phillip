@@ -1,6 +1,6 @@
 "use client";
 
-import { assets } from "@/assets/asset";
+import { assets } from "@/public/assets/asset";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";

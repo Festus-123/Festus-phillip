@@ -7,7 +7,7 @@ import { heroEntrance } from "@/animations/heroEntrance/heroEntrance";
 import { textReveal } from "@/animations/textReveal/textReveal";
 
 import { personal } from "@/data/mydata";
-import { assets } from "@/assets/asset";
+import { assets } from "@/public/assets/asset";
 import Link from "next/link";
 import Image from "next/image";
 

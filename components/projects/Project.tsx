@@ -81,8 +81,12 @@ const Project = () => {
 
   return (
     <section ref={sectionRef} className="relative bg-cream">
-      {/* huge title */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[120px_120px] bg-fixed"
+        />
 
+      {/* huge title */}
       <div className="h-[90vh] sticky top-55 z-0 ">
         <h1 className=" text-center font-satoshi text-[clamp(4em,12vw,12em)] font-extrabold uppercase leading-none tracking-[-0.06em] text-brand-gradient">
           My Works
@@ -132,26 +136,14 @@ const Project = () => {
 
                   <div className="mb-12 grid gap-6 md:grid-cols-[1fr_2fr] md:items-end">
                     <div>
-                      {/* <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-blue">
-                        {String(
-                          [
-                            "fullstack",
-                            "frontend",
-                            "backend",
-                            "mobile",
-                            "automation",
-                          ].indexOf(section.type) + 1,
-                        ).padStart(2, "0")}
-                      </p> */}
-
                       <h2 className="font-satoshi text-[clamp(2.8rem,6vw,6rem)] font-extrabold uppercase leading-[0.85] tracking-[-0.05em] text-ink">
                         {section.title}
                       </h2>
                     </div>
-
+{/* 
                     <p className="max-w-2xl font-general text-base leading-7 text-secondary md:text-lg">
                       {section.description}
-                    </p>
+                    </p> */}
                   </div>
 
                   {/* break line */}

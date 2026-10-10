@@ -1,3 +1,5 @@
+import { assets } from "@/public/assets/asset";
+
 export type SkillCategory = {
   id: string;
   number: string;
@@ -6,6 +8,75 @@ export type SkillCategory = {
   skills: string[];
   accent: "blue" | "gold" | "ink";
 };
+
+export type TOOL = {
+  id: string;
+  name: string;
+  image: string;
+};
+
+export const tools: TOOL[] = [
+  {
+    id: "next",
+    name: "next",
+    image: assets.next,
+  },
+  {
+    id: "react",
+    name: "react",
+    image: assets.react,
+  },
+  {
+    id: "typescript",
+    name: "typescript",
+    image: assets.typescript,
+  },
+  {
+    id: "tailwind",
+    name: "tailwind",
+    image: assets.tailwind,
+  },
+  {
+    id: "express",
+    name: "express JS",
+    image: assets.express,
+  },
+  {
+    id: "javascript",
+    name: "Javascript",
+    image: assets.javascript,
+  },
+  {
+    id: "supabase",
+    name: "supabase",
+    image: assets.supabase,
+  },
+  {
+    id: "git",
+    name: "git",
+    image: assets.git,
+  },
+  {
+    id: "github",
+    name: "github",
+    image: assets.github,
+  },
+  {
+    id: "vercel",
+    name: "vercel",
+    image: assets.vercel,
+  },
+  {
+    id: "python",
+    name: "python",
+    image: assets.python,
+  },
+  {
+    id: "react-native",
+    name: "react native",
+    image: assets.reactNative,
+  },
+];
 
 export const skillCategories: SkillCategory[] = [
   {
@@ -62,13 +133,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Testing",
     description:
       "Writing tests that help applications stay predictable as features and codebases grow.",
-    skills: [
-      "Jest",
-      "Vitest",
-      "Supertest",
-      "Unit Testing",
-      "API Testing",
-    ],
+    skills: ["Jest", "Vitest", "Supertest", "Unit Testing", "API Testing"],
     accent: "blue",
   },
   {
@@ -109,13 +174,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Tools & Workflow",
     description:
       "The tools I use to build, collaborate, deploy, and maintain projects.",
-    skills: [
-      "Git",
-      "GitHub",
-      "Vercel",
-      "Figma",
-      "VS Code",
-    ],
+    skills: ["Git", "GitHub", "Vercel", "Figma", "VS Code"],
     accent: "blue",
   },
 ];

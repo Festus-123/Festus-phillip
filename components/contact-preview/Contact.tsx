@@ -4,7 +4,7 @@ import { FiArrowUpRight, FiSend } from "react-icons/fi";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { useGSAP } from "@gsap/react";
-import { assets } from "@/assets/asset";
+import { assets } from "@/public/assets/asset";
 
 import contacts from "@/data/contact";
 import { cardHover, magnetic, stagger, textReveal } from "@/animations";

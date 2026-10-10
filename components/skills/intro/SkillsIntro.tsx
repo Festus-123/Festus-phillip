@@ -1,13 +1,15 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 
-import { skillCategories } from "@/data/skills";
+import { skillCategories, tools } from "@/data/skills";
 import { cardHover, floating, stagger, textReveal } from "@/animations";
+import Image from "next/image";
 
 const SkillsIntro = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [selectedTool, setSelectedTool] = useState<number | null>(null);
 
   useGSAP(
     () => {
@@ -76,104 +78,50 @@ const SkillsIntro = () => {
         </div>
 
         {/* Skills */}
-        <div className="grid gap-8 md:grid-cols-12">
-          {skillCategories
-            .filter((category) =>
-              ["frontend", "backend", "mobile"].includes(category.id),
-            )
-            .map((category) => {
-              const isFrontend = category.id === "frontend";
-
-              return (
-                <article
-                  key={category.id}
-                  data-skill-card
-                  className={[
-                    "relative overflow-hidden rounded-sm p-7 md:p-9",
-                    isFrontend ? "md:col-span-12" : "md:col-span-6",
-                    category.accent === "blue"
-                      ? "bg-blue text-white card-offset"
-                      : "",
-                    category.accent === "gold"
-                      ? "bg-gold text-ink card-offset"
-                      : "",
-                    category.accent === "ink"
-                      ? "bg-ink text-white card-offset"
-                      : "",
-                  ].join(" ")}
-                >
-                  {/* Decorative number */}
-                  <span
-                    data-skill-decor
-                    className={[
-                      "absolute -right-4 -top-8 select-none font-satoshi text-[9rem] font-bold leading-none opacity-10 md:text-[12rem]",
-                      category.accent === "gold" ? "text-ink" : "text-white",
-                    ].join(" ")}
-                  >
-                    {category.number}
-                  </span>
-
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className="mb-10 flex items-start justify-between">
-                      <span
-                        className={[
-                          "font-satoshi text-xs font-bold uppercase tracking-[0.2em]",
-                          category.accent === "gold"
-                            ? "text-ink/60"
-                            : "text-white/60",
-                        ].join(" ")}
-                      >
-                        {category.number}
-                      </span>
-
-                      <span
-                        className={[
-                          "h-3 w-3 rounded-full",
-                          category.accent === "blue"
-                            ? "bg-gold"
-                            : category.accent === "gold"
-                              ? "bg-blue"
-                              : "bg-gold",
-                        ].join(" ")}
-                      />
-                    </div>
-
-                    <h3 className="font-satoshi text-3xl font-bold tracking-tight md:text-4xl">
-                      {category.title}
-                    </h3>
-
-                    <p
-                      className={[
-                        "mt-4 max-w-lg font-general text-lg leading-6 ",
-                        category.accent === "gold"
-                          ? "text-ink/70"
-                          : "text-white/70",
-                      ].join(" ")}
-                    >
-                      {category.description}
-                    </p>
-
-                    {/* Skill pills */}
-                    <div className="mt-8 flex flex-wrap gap-2">
-                      {category.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className={[
-                            "border px-3 py-2 font-general text-sm font-medium",
-                            category.accent === "gold"
-                              ? "border-ink/20 bg-white/30 text-ink"
-                              : "border-white/20 bg-white/10 text-white",
-                          ].join(" ")}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
+        <div className="relative mx-auto flex items-center justify-center bg-blue/[0.04] px-5 py-10 [perspective:1000px] md:min-h-[32rem]">
+                        <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[120px_120px]"
+      />
+          <div
+            className="relative grid w-full grid-cols-3 place-items-center gap-x-3 gap-y-8 transition-transform duration-700 ease-out sm:grid-cols-4 sm:gap-x-8 sm:gap-y-12"
+            style={{
+              transform:
+                selectedTool === null
+                  ? "rotateX(12deg) rotateY(-8deg)"
+                  : `rotateX(${((selectedTool % 5) - 2) * 6 + 12}deg) rotateY(${((selectedTool % 7) - 3) * 8 - 8}deg)`,
+            }}
+          >
+            {tools.map((item, index) => (
+              <button
+                key={index}
+                type="button"
+                aria-pressed={selectedTool === index}
+                onClick={() =>
+                  setSelectedTool(selectedTool === index ? null : index)
+                }
+                className={`relative flex min-h-16 min-w-16 items-center justify-center px-3 py-2 text-center font-satoshi text-xs font-bold transition-all duration-400 sm:min-h-20 sm:min-w-20 sm:text-sm ${
+                  selectedTool === index
+                    ? "scale-110 text-cream glass bg-cream/15 backdrop-blur-lg"
+                    : " hover:scale-110 hover:border-blue "
+                }`}
+                style={{
+                  transform: `translateZ(${index % 3 === 0 ? 24 : index % 3 === 1 ? -12 : 8}px)`,
+                }}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  width={140}
+                  height={140}
+                  className="h-20 w-20 sm:h-25 sm:w-25 object-contain"
+                />
+                {selectedTool && (<p className="absolute top-0 right-0">{item.name}</p>)}
+              </button>
+            ))}
+          </div>
+          {/* <div className="pointer-events-none absolute inset-x-8 top-1/2 border-t border-dashed border-blue/25" /> */}
+          {/* <div className="pointer-events-none absolute inset-y-8 left-1/2 border-l border-dashed border-blue/25" /> */}
         </div>
 
         {/* Bottom statement */}
