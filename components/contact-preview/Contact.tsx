@@ -112,7 +112,6 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      id="contact"
       className="relative overflow-hidden bg-ink px-6 py-24 text-white md:px-12 md:py-32 lg:px-20"
     >
       {/* Decorative background */}
@@ -167,8 +166,8 @@ const Contact = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
           {/* Contact statement */}
           <div className="lg:col-span-5">
-            <div className="relative h-full min-h-[320px] overflow-hidden border-2 border-white/15 bg-white/[0.04] p-7 md:p-10">
-              <span className="absolute -right-5 -top-10 font-satoshi text-[12rem] font-bold leading-none text-white/[0.03]">
+            <div className="relative h-full min-h-80 overflow-hidden border-2 border-white/15 bg-white/4 p-7 md:p-10">
+              <span className="absolute -right-5 -top-10 font-satoshi text-[12rem] font-bold leading-none text-white/3">
                 ?
               </span>
 
@@ -193,7 +192,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="lg:col-span-7">
+          <form id="contact" onSubmit={handleSubmit} className="lg:col-span-7">
             <div className="space-y-8">
               {/* Email */}
               <div

@@ -194,7 +194,7 @@ const Introduction = () => {
               />
 
               <Panel
-                title="simulation"
+                title="navigation"
                 command="npm run dev"
                 output={[
                   "C://festusphillip/introduction> npm run dev",

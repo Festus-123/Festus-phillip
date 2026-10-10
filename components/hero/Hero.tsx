@@ -29,7 +29,7 @@ const Hero = () => {
     },
     {
       scope: heroRef,
-    }
+    },
   );
 
   return (
@@ -50,6 +50,11 @@ const Hero = () => {
         className="pointer-events-none absolute bottom-10 left-10 h-32 w-32 rounded-full bg-gold opacity-15 blur-2xl"
       />
 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[120px_120px]"
+      />
+
       <div className="mx-auto flex min-h-[calc(100vh-12rem)] max-w-7xl items-center">
         <div className="grid w-full items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
           {/* LEFT — CONTENT */}
@@ -67,40 +72,36 @@ const Hero = () => {
             <h1
               ref={headingRef}
               data-hero-heading
-              className="max-w-4xl font-satoshi text-5xl font-bold leading-[0.95] tracking-[-0.04em] md:text-7xl lg:text-[6.5rem]"
+              className="max-w-4xl font-satoshi text-4xl font-bold leading-[0.95] tracking-[-0.04em] md:text-6xl lg:text-[5.5rem]"
             >
               Hi, I&apos;m{" "}
               <span className="text-transparent [-webkit-text-stroke:2px_#000000]">
                 {personal.firstName}.
               </span>
-              <br />
-              I build for the web.
+              <br />I build for the web.
             </h1>
 
             {/* Description */}
             <p
               data-hero-description
-              className="mt-8 max-w-2xl font-general text-base leading-7 text-muted md:text-lg md:leading-8"
+              className="mt-8 max-w-2xl font-general text-sm leading-6 text-muted md:text-base md:leading-7"
             >
               A software developer focused on building modern web and mobile
               applications with JavaScript technologies.
             </p>
 
             {/* Actions */}
-            <div
-              data-hero-action
-              className="mt-10 flex flex-wrap gap-4"
-            >
+            <div data-hero-action className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/projects"
-                className="card-offset-blue inline-flex items-center justify-center bg-blue px-6 py-3 font-general text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-1 "
+                className="card-offset-blue inline-flex items-center justify-center bg-blue px-5 py-2.5 font-general text-xs font-semibold text-white transition-transform duration-300 hover:-translate-y-1 "
               >
                 View Projects
               </Link>
 
               <a
                 href="#contact"
-                className="card-offset inline-flex items-center justify-center bg-cream-light px-6 py-3 font-general text-sm font-semibold text-primary transition-transform duration-300 hover:-translate-y-1"
+                className="card-offset inline-flex items-center justify-center bg-cream-light px-5 py-2.5 font-general text-xs font-semibold text-primary transition-transform duration-300 hover:-translate-y-1"
               >
                 Contact Me
               </a>
@@ -124,7 +125,7 @@ const Hero = () => {
           {/* RIGHT — PROFILE / VISUAL */}
           <div
             data-hero-decor
-            className="relative mx-auto w-full max-w-md lg:ml-auto"
+            className="relative mx-auto w-full max-w-xs lg:ml-auto"
           >
             {/* Back card */}
             <div className="absolute -right-4 -top-4 h-full w-full rotate-3 border-2 border-gold bg-gold" />
@@ -155,15 +156,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Bottom marker */}
-      <div
-        data-hero-social
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 items-center gap-3 font-general text-[10px] uppercase tracking-[0.25em] text-muted md:flex"
-      >
-        <span>Scroll to explore</span>
-        <span className="h-px w-10 bg-ink/30" />
       </div>
     </section>
   );

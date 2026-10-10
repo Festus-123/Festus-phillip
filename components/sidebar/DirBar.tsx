@@ -191,7 +191,7 @@ const DirBar = () => {
                     ${
                       isActive
                         ? "bg-blue text-white"
-                        : "bg-cream text-ink hover:-translate-y-1 hover:bg-blue hover:text-white"
+                        : "bg-cream text-ink hover:-translate-y-1 hover:bg-gold hover:text-ink"
                     }
                   `}
                 >

@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { assets } from "@/assets/asset";
+import { useRouter } from "next/navigation";
 
 import { about, codeIntro, dreams, hobbies, personal } from "@/data/mydata";
 
@@ -16,9 +17,12 @@ import {
   magnetic,
   floating,
 } from "@/animations";
+import Panel from "../panel/Panel";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [coding, setCoding] = useState<boolean>(false);
+  const router = useRouter();
 
   useGSAP(
     () => {
@@ -93,11 +97,22 @@ const About = () => {
     },
   );
 
+  const handleSimulationComplete = () => {
+    window.setTimeout(() => {
+      router.push("#contact");
+      setCoding(false)
+    }, 2000);
+  };
+
   return (
     <section
       ref={sectionRef}
       className="overflow-hidden bg-cream px-6 py-24 md:px-12 md:py-32 lg:px-20"
     >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[120px_120px]"
+      />
       <div className="mx-auto max-w-7xl">
         {/* =========================================================
             INTRO
@@ -133,7 +148,7 @@ const About = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-20">
           {/* Image */}
           <div data-about-image className="relative lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden border-2 border-ink bg-cream-dark card-offset grayscale transition-all duration-300 hover:grayscale-0">
+            <div className="relative aspect-4/5 overflow-hidden border-2 border-ink bg-cream-dark card-offset grayscale transition-all duration-300 hover:grayscale-0">
               <div
                 data-image-reveal-mask
                 className="absolute inset-0 z-10 bg-blue"
@@ -168,6 +183,11 @@ const About = () => {
               <p>
                 <span className="font-satoshi font-bold text-ink">Hi 👋.</span>{" "}
                 {about.long[0]}
+              </p>{" "}
+              <br /> 
+              <br />
+              <p>
+                {about.long[1]} 
               </p>
             </div>
 
@@ -212,8 +232,12 @@ const About = () => {
 
             <div className="relative z-10 font-mono text-sm leading-8 md:text-lg md:leading-9">
               <div className="text-white/40 ">
-                <span className="text-gold text-white/40">let</span> festus ={" "}
-                {"{}"}
+                <span>
+                  const {"{"} coding, setCoding {"}"} = useState{"<"}boolean
+                  {">"}(false); <br /> <br />
+                </span>
+                <span className="text-gold text-white/40">let</span> festus:{" "}
+                <span className="text-green-500">ACTS</span> = {"{}"}
               </div>
 
               <div className=" text-white/70 mt-10">
@@ -243,15 +267,46 @@ const About = () => {
               </div>
               <div className="text-white/40 mt-2 pl-6 md:pl-10">{"}"}</div>
 
+              <div className="text-white/40 ml-6 md:ml-10">
+                console.log(`Festus is open to work: ${"{"}festus{"}"} `)
+              </div>
+
               <div className="text-white/40">{"}"};</div>
 
               <div className=" text-white/70 mt-10">
-                <div>
-                  console.log(`When festus is not coding : ${"{"}festus{"}"} `)
-                </div>
+                <div>console.log(`Let&apos; Build something useful; 😎`)</div>
               </div>
             </div>
+
+            {coding && (
+              <div className="absolute left-1/2 top-1/2 z-20 w-[90%] -translate-x-1/2 -translate-y-1/2 md:w-auto">
+                {/* <div
+                  data-image-reveal-mask
+                  className="absolute inset-0 z-10 bg-blue"
+                /> */}
+
+                <Panel
+                  title="processing"
+                  command="npm run dev"
+                  output={[
+                    "C://festusphillip/about> npm run dev",
+                    "Starting the development server...",
+                    "dev server: https://festusphillip.dev",
+                    "opening path: https://festusphillip.dev/contact",
+                  ]}
+                  onComplete={handleSimulationComplete}
+                />
+              </div>
+            )}
+            <button
+              disabled={coding}
+              onClick={() => setCoding(true)}
+              className="card-offset text-black p-3 w-full max-w-sm tracking-widest cursor-pointer absolute bottom-4 right-4 bg-cream"
+            >
+              () {"=>"} setCoding(true);
+            </button>
           </div>
+
         </div>
 
         {/* =========================================================
