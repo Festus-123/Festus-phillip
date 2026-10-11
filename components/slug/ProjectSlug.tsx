@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { useRef } from "react";
 
@@ -22,7 +22,7 @@ const ProjectPage = () => {
   const params = useParams();
   const slug = params.slug as string;
 
-  const pageRef = useRef<main>(null);
+  const pageRef = useRef<HTMLElement>(null);
 
   const project = links.find((item) => item.slug === slug);
 
@@ -43,25 +43,29 @@ const ProjectPage = () => {
         "[data-project-tagline]",
       );
 
-      const heroMeta = pageRef.current.querySelectorAll("[data-project-meta]");
+      const heroMeta = pageRef.current.querySelectorAll<HTMLElement>(
+        "[data-project-meta]",
+      );
 
       const projectImage = pageRef.current.querySelector<HTMLElement>(
         "[data-project-image]",
       );
 
-      const overviewItems = pageRef.current.querySelectorAll(
+      const overviewItems = pageRef.current.querySelectorAll<HTMLElement>(
         "[data-project-overview]",
       );
 
-      const highlightItems = pageRef.current.querySelectorAll(
+      const highlightItems = pageRef.current.querySelectorAll<HTMLElement>(
         "[data-project-highlight]",
       );
 
-      const featureItems = pageRef.current.querySelectorAll(
+      const featureItems = pageRef.current.querySelectorAll<HTMLElement>(
         "[data-project-feature]",
       );
 
-      const links = pageRef.current.querySelectorAll("[data-project-link]");
+      const links = pageRef.current.querySelectorAll<HTMLElement>(
+        "[data-project-link]",
+      );
 
       if (heroTitle) {
         textReveal(heroTitle, {
@@ -83,7 +87,6 @@ const ProjectPage = () => {
       if (heroMeta.length) {
         stagger(heroMeta, {
           variant: "fast",
-          delay: 0.2,
         });
       }
 
@@ -97,21 +100,18 @@ const ProjectPage = () => {
       if (overviewItems.length) {
         stagger(overviewItems, {
           variant: "default",
-          delay: 0.1,
         });
       }
 
       if (highlightItems.length) {
         stagger(highlightItems, {
           variant: "default",
-          delay: 0.05,
         });
       }
 
       if (featureItems.length) {
         stagger(featureItems, {
           variant: "fast",
-          delay: 0.05,
         });
       }
 
@@ -189,7 +189,6 @@ const ProjectPage = () => {
           >
             {project.tagline}
           </p>
-
 
           <div className="flex flex-wrap gap-3 mt-4">
             {project.stacks.map((stack) => (

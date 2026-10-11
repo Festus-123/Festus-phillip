@@ -4,9 +4,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "sonner";
 import PageTransition from "@/animations/transitions/pageTransition/PageTransition";
-import Sidebar from "@/components/sidebar/Sidebar";
-import Contact_Preview from "@/components/contact-preview/Contact_Preview";
-import Footer from "@/components/footer/Footer";
+// import Sidebar from "@/components/sidebar/Sidebar";
+// import Contact_Preview from "@/components/contact-preview/Contact_Preview";
+// import Footer from "@/components/footer/Footer";
 import Contact from "@/components/contact-preview/Contact";
 import DirBar from "@/components/sidebar/DirBar";
 
