@@ -389,11 +389,11 @@ export const links: Project[] = [
     category: "REST API",
     year: "2025",
 
-    site: "/",
-    github_site: "https://github.com/Festus-123/reminder-api",
+    site: "https://reminders-api-production-75c3.up.railway.app/health",
+    github_site: "https://github.com/Festus-123/reminders-api",
     github: "/github.jpg",
 
-    stacks: ["Node.js", "Express", "TypeScript", "PostgreSQL"],
+    stacks: ["Node.js", "Express", "Javascript", "Neon-DB", "Railway", "Vitest"],
 
     tagline: "An API for creating and managing reminders.",
     description:
@@ -426,11 +426,11 @@ export const links: Project[] = [
     category: "Event Ticketing API",
     year: "2025",
 
-    site: "/",
-    github_site: "https://github.com/Festus-123/Ticketpass-api",
+    site: "https://ticketpass-api-production.up.railway.app/health",
+    github_site: "https://github.com/Festus-123/TicketPass-api",
     github: "/github.jpg",
 
-    stacks: ["Node.js", "Express", "TypeScript", "PostgreSQL"],
+    stacks: ["Node.js", "Express", "Javascript", "Neon-DB", "PostgressSQl", "SQLite"],
 
     tagline: "A backend for booking and managing event tickets.",
     description:
@@ -508,10 +508,10 @@ export const links: Project[] = [
     category: "Mobile Application",
     year: "2025",
 
-    github_site: "https://github.com/Festus-123/medical-health-track",
+    github_site: "https://github.com/Festus-123/Medical-Health-Track",
     github: "/github.jpg",
 
-    stacks: ["React Native", "Expo", "TypeScript", "NativeWind", "SQLite"],
+    stacks: ["React Native", "Expo", "Javascript", "Stylesheet", "Redux"],
 
     tagline:
       "A mobile app for tracking health routines and medical information.",
@@ -545,15 +545,16 @@ export const links: Project[] = [
     category: "Mobile Application",
     year: "2025",
 
-    github_site: "https://github.com/Festus-123/Reminder-app",
+    github_site: "https://github.com/Festus-123/Reminder-App",
     github: "/github.jpg",
 
     stacks: [
       "React Native",
       "Expo",
       "TypeScript",
-      "NativeWind",
+      "Stylesheet",
       "AsyncStorage",
+      "React-hooks"
     ],
 
     tagline: "A mobile app for creating and managing reminders.",
