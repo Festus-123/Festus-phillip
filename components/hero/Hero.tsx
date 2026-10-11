@@ -62,7 +62,7 @@ const Hero = () => {
             {/* Intro */}
             <div
               data-hero-intro
-              className="mb-6 flex items-center gap-3 font-general text-sm font-medium uppercase tracking-[0.2em] text-muted"
+              className="mb-6 flex items-center gap-3 font-general text-xs sm:text-sm font-medium uppercase tracking-[0.2em] text-muted"
             >
               <span className="h-2 w-2 rounded-full bg-blue" />
               <span>{personal.title}</span>
@@ -72,7 +72,7 @@ const Hero = () => {
             <h1
               ref={headingRef}
               data-hero-heading
-              className="max-w-4xl font-satoshi text-4xl font-bold leading-[0.95] tracking-[-0.04em] md:text-6xl lg:text-[5.5rem]"
+              className="max-w-4xl font-satoshi text-[clamp(3rem,6vw,8rem)] font-bold leading-[0.95] tracking-[-0.04em]"
             >
               Hi, I&apos;m{" "}
               <span className="text-transparent [-webkit-text-stroke:2px_#000000]">

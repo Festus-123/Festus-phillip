@@ -6,10 +6,7 @@ export type ProjectType =
   | "automation"
   | "experiment";
 
-export type ProjectStatus =
-  | "Live"
-  | "In Development"
-  | "Archived";
+export type ProjectStatus = "Live" | "In Development" | "Archived";
 
 export type Project = {
   slug: string;
@@ -41,40 +38,40 @@ export type PROJECTSECTION = {
   type: string;
   title: string;
   description: string;
-}
+};
 
 export const projectSections: PROJECTSECTION[] = [
-    {
-      type: "fullstack",
-      title: "Full-stack",
-      description:
-        "Products where I worked across the interface, application logic, data, and the systems connecting everything together.",
-    },
-    {
-      type: "frontend",
-      title: "Front-end",
-      description:
-        "Interfaces focused on responsive layouts, interaction, animation, and turning ideas into polished digital experiences.",
-    },
-    {
-      type: "backend",
-      title: "Back-end",
-      description:
-        "Server-side systems, APIs, data flows, authentication, and the logic that keeps applications running behind the interface.",
-    },
-    {
-      type: "mobile",
-      title: "Mobile-app",
-      description:
-        "Mobile experiences built around practical interfaces, application logic, and the constraints of smaller screens.",
-    },
-    {
-      type: "automation",
-      title: "Automation",
-      description:
-        "Tools and experiments built to automate repetitive work, process information, or explore new technical ideas.",
-    },
-  ]
+  {
+    type: "fullstack",
+    title: "Full-stack",
+    description:
+      "Products where I worked across the interface, application logic, data, and the systems connecting everything together.",
+  },
+  {
+    type: "frontend",
+    title: "Front-end",
+    description:
+      "Interfaces focused on responsive layouts, interaction, animation, and turning ideas into polished digital experiences.",
+  },
+  {
+    type: "backend",
+    title: "Back-end",
+    description:
+      "Server-side systems, APIs, data flows, authentication, and the logic that keeps applications running behind the interface.",
+  },
+  {
+    type: "mobile",
+    title: "Mobile-app",
+    description:
+      "Mobile experiences built around practical interfaces, application logic, and the constraints of smaller screens.",
+  },
+  {
+    type: "automation",
+    title: "Automation",
+    description:
+      "Tools and experiments built to automate repetitive work, process information, or explore new technical ideas.",
+  },
+];
 
 export const links: Project[] = [
   // =========================================================
@@ -110,8 +107,7 @@ export const links: Project[] = [
     description:
       "Tax Master is a Nigerian tax estimation tool built to make tax calculations easier for everyday users. Instead of forcing users through complicated formulas, the application turns the process into a simple guided experience where users provide their financial information and receive an understandable estimate of their tax obligations.",
 
-    role:
-      "Designed and developed the frontend, calculation flow, responsive interface, result presentation, and user interaction system.",
+    role: "Designed and developed the frontend, calculation flow, responsive interface, result presentation, and user interaction system.",
 
     highlights: [
       "Built the tax calculation logic around the 2026 Nigerian tax rules used by the application.",
@@ -145,22 +141,14 @@ export const links: Project[] = [
     github_site: "https://github.com/Festus-123/phipest-bens",
     github: "/github.jpg",
 
-    stacks: [
-      "Next.js",
-      "TypeScript",
-      "GSAP",
-      "Tailwind CSS",
-      "Responsive UI",
-    ],
+    stacks: ["Next.js", "TypeScript", "GSAP", "Tailwind CSS", "Responsive UI"],
 
-    tagline:
-      "Turning a multi-service company into a clear digital presence.",
+    tagline: "Turning a multi-service company into a clear digital presence.",
 
     description:
       "Phipest-Bens International is a company operating across areas including construction and automobile sales. The challenge was not simply creating a website, but organizing several different services into an experience that visitors could understand quickly.",
 
-    role:
-      "Designed and developed the complete frontend experience, including page structure, responsive layouts, animations, service presentation, and enquiry flow.",
+    role: "Designed and developed the complete frontend experience, including page structure, responsive layouts, animations, service presentation, and enquiry flow.",
 
     highlights: [
       "Structured multiple business services into a clear navigation and content hierarchy.",
@@ -203,14 +191,12 @@ export const links: Project[] = [
       "Sonner",
     ],
 
-    tagline:
-      "A digital front door for an automotive service business.",
+    tagline: "A digital front door for an automotive service business.",
 
     description:
       "Weslime Auto Repair provides services ranging from vehicle repairs and car washing to car parts and other automotive needs. The website was built to give the business a professional online presence while making it easier for customers to discover available services and make enquiries.",
 
-    role:
-      "Designed and developed the website structure, responsive interface, service sections, enquiry experience, and supporting interactions.",
+    role: "Designed and developed the website structure, responsive interface, service sections, enquiry experience, and supporting interactions.",
 
     highlights: [
       "Organized several automotive services into a straightforward browsing experience.",
@@ -242,8 +228,7 @@ export const links: Project[] = [
     year: "2026",
 
     site: "https://coolchef-nationwide-eats.vercel.app/",
-    github_site:
-      "https://github.com/Festus-123/coolchef-nationwide-eats",
+    github_site: "https://github.com/Festus-123/coolchef-nationwide-eats",
     github: "/github.jpg",
 
     stacks: [
@@ -254,14 +239,12 @@ export const links: Project[] = [
       "Sonner",
     ],
 
-    tagline:
-      "A food-focused experience built around discovering what to eat.",
+    tagline: "A food-focused experience built around discovering what to eat.",
 
     description:
       "CoolChef Nationwide Eats is a restaurant-focused website designed around food discovery and presentation. The interface brings recipes, dishes, and cooking content into one responsive experience, making it easy for visitors to browse meals and explore the content without unnecessary complexity.",
 
-    role:
-      "Designed and developed the frontend experience, responsive layouts, recipe presentation, and interactive UI elements.",
+    role: "Designed and developed the frontend experience, responsive layouts, recipe presentation, and interactive UI elements.",
 
     highlights: [
       "Created a food-first interface where imagery and content work together.",
@@ -317,8 +300,7 @@ export const links: Project[] = [
     description:
       "M & K Clothing started as a storefront concept and grew into a functional e-commerce experience with dynamic product data. The application connects the customer-facing store to a management dashboard, allowing products and collections to be created, updated, and removed without manually changing the frontend.",
 
-    role:
-      "Designed and developed the customer storefront, product flows, responsive UI, Supabase integration, and dashboard functionality.",
+    role: "Designed and developed the customer storefront, product flows, responsive UI, Supabase integration, and dashboard functionality.",
 
     highlights: [
       "Connected the storefront to Supabase for dynamic product and collection data.",
@@ -371,8 +353,7 @@ export const links: Project[] = [
     description:
       "Wear It All Luxury is a fashion e-commerce experience built around presenting products in a polished and accessible way. Beyond the storefront itself, the project connects to a backend system for managing data and uses validation and email services to support customer interactions.",
 
-    role:
-      "Designed and developed the storefront, responsive UI, product experience, Supabase integration, validation, and customer communication flow.",
+    role: "Designed and developed the storefront, responsive UI, product experience, Supabase integration, validation, and customer communication flow.",
 
     highlights: [
       "Connected the frontend to Supabase for dynamic application data.",
@@ -408,20 +389,16 @@ export const links: Project[] = [
     category: "REST API",
     year: "2025",
 
+    site: "/",
+    github_site: "https://github.com/Festus-123/reminder-api",
     github: "/github.jpg",
 
-    stacks: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "PostgreSQL",
-    ],
+    stacks: ["Node.js", "Express", "TypeScript", "PostgreSQL"],
 
     tagline: "An API for creating and managing reminders.",
     description:
       "Reminder API is a backend service designed to help users create, update, and manage reminders. It provides a structured and reusable REST API for reminder-related operations.",
-    role:
-      "Designed and developed the API, data model, business logic, and backend service structure.",
+    role: "Designed and developed the API, data model, business logic, and backend service structure.",
 
     highlights: [
       "Built a REST API for reminder creation and management.",
@@ -449,20 +426,16 @@ export const links: Project[] = [
     category: "Event Ticketing API",
     year: "2025",
 
+    site: "/",
+    github_site: "https://github.com/Festus-123/Ticketpass-api",
     github: "/github.jpg",
 
-    stacks: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "PostgreSQL",
-    ],
+    stacks: ["Node.js", "Express", "TypeScript", "PostgreSQL"],
 
     tagline: "A backend for booking and managing event tickets.",
     description:
       "TicketPass API is an event ticketing backend that supports ticket booking and related event-management operations. It provides the API foundation for an application focused on making event ticket transactions organized and accessible.",
-    role:
-      "Designed and developed the ticketing API, booking flow, data model, and application backend logic.",
+    role: "Designed and developed the ticketing API, booking flow, data model, and application backend logic.",
 
     highlights: [
       "Built an API for booking tickets to events.",
@@ -481,46 +454,46 @@ export const links: Project[] = [
     status: "Live",
   },
 
-  {
-    slug: "campus-lost-and-found-api",
-    name: "Campus Lost & Found API",
-    image: "CLF",
+  // {
+  //   slug: "campus-lost-and-found-api",
+  //   name: "Campus Lost & Found API",
+  //   image: "CLF",
 
-    type: "backend",
-    category: "REST API",
-    year: "2025",
+  //   type: "backend",
+  //   category: "REST API",
+  //   year: "2025",
 
-    github: "/github.jpg",
+  //   github: "/github.jpg",
 
-    stacks: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "PostgreSQL",
-    ],
+  //   stacks: [
+  //     "Node.js",
+  //     "Express",
+  //     "TypeScript",
+  //     "PostgreSQL",
+  //   ],
 
-    tagline: "A backend for reporting and resolving lost campus items.",
-    description:
-      "Campus Lost & Found API is a backend service for reporting lost items, recording found items, and managing related records within a campus community. It provides a structured API for handling item reports and status updates.",
-    role:
-      "Designed and developed the API, reporting workflow, data model, and backend service logic.",
+  //   tagline: "A backend for reporting and resolving lost campus items.",
+  //   description:
+  //     "Campus Lost & Found API is a backend service for reporting lost items, recording found items, and managing related records within a campus community. It provides a structured API for handling item reports and status updates.",
+  //   role:
+  //     "Designed and developed the API, reporting workflow, data model, and backend service logic.",
 
-    highlights: [
-      "Built an API for reporting lost and found items.",
-      "Supported structured records for item listings and updates.",
-      "Created a reusable backend workflow for campus item management.",
-    ],
+  //   highlights: [
+  //     "Built an API for reporting lost and found items.",
+  //     "Supported structured records for item listings and updates.",
+  //     "Created a reusable backend workflow for campus item management.",
+  //   ],
 
-    features: [
-      "Lost item reports",
-      "Found item records",
-      "Item status management",
-      "REST API",
-      "Database integration",
-    ],
+  //   features: [
+  //     "Lost item reports",
+  //     "Found item records",
+  //     "Item status management",
+  //     "REST API",
+  //     "Database integration",
+  //   ],
 
-    status: "Live",
-  },
+  //   status: "Live",
+  // },
 
   // =========================================================
   // MOBILE
@@ -535,21 +508,16 @@ export const links: Project[] = [
     category: "Mobile Application",
     year: "2025",
 
+    github_site: "https://github.com/Festus-123/medical-health-track",
     github: "/github.jpg",
 
-    stacks: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "NativeWind",
-      "SQLite",
-    ],
+    stacks: ["React Native", "Expo", "TypeScript", "NativeWind", "SQLite"],
 
-    tagline: "A mobile app for tracking health routines and medical information.",
+    tagline:
+      "A mobile app for tracking health routines and medical information.",
     description:
       "Medical Health Track is a mobile application designed to help users organize health-related information, monitor daily wellness habits, and keep useful medical details in one place.",
-    role:
-      "Designed and developed the mobile interface, health tracking workflow, data organization, and app experience.",
+    role: "Designed and developed the mobile interface, health tracking workflow, data organization, and app experience.",
 
     highlights: [
       "Built a mobile experience for managing health-related records.",
@@ -577,6 +545,7 @@ export const links: Project[] = [
     category: "Mobile Application",
     year: "2025",
 
+    github_site: "https://github.com/Festus-123/Reminder-app",
     github: "/github.jpg",
 
     stacks: [
@@ -590,8 +559,7 @@ export const links: Project[] = [
     tagline: "A mobile app for creating and managing reminders.",
     description:
       "Reminder App is a mobile application for creating, viewing, and managing reminders. It provides a simple interface for organizing personal tasks and time-sensitive activities.",
-    role:
-      "Designed and developed the mobile interface, reminder workflow, and persistent local data handling.",
+    role: "Designed and developed the mobile interface, reminder workflow, and persistent local data handling.",
 
     highlights: [
       "Built a clean reminder creation and management experience.",
@@ -610,47 +578,47 @@ export const links: Project[] = [
     status: "Live",
   },
 
-  {
-    slug: "campus-lost-and-found-mobile",
-    name: "Campus Lost & Found",
-    image: "/project-image.png",
+  // {
+  //   slug: "campus-lost-and-found-mobile",
+  //   name: "Campus Lost & Found",
+  //   image: "/project-image.png",
 
-    type: "mobile",
-    category: "Mobile Application",
-    year: "2025",
+  //   type: "mobile",
+  //   category: "Mobile Application",
+  //   year: "2025",
 
-    github: "/github.jpg",
+  //   github: "/github.jpg",
 
-    stacks: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "NativeWind",
-      "REST API",
-    ],
+  //   stacks: [
+  //     "React Native",
+  //     "Expo",
+  //     "TypeScript",
+  //     "NativeWind",
+  //     "REST API",
+  //   ],
 
-    tagline: "A mobile way to report and resolve lost campus items.",
-    description:
-      "Campus Lost & Found is a mobile application that allows users to report lost items, record found items, and follow the status of related cases within a campus community.",
-    role:
-      "Designed and developed the mobile interface, reporting workflow, item-status experience, and API integration.",
+  //   tagline: "A mobile way to report and resolve lost campus items.",
+  //   description:
+  //     "Campus Lost & Found is a mobile application that allows users to report lost items, record found items, and follow the status of related cases within a campus community.",
+  //   role:
+  //     "Designed and developed the mobile interface, reporting workflow, item-status experience, and API integration.",
 
-    highlights: [
-      "Built a mobile workflow for reporting lost and found items.",
-      "Created an accessible interface for tracking item status.",
-      "Connected the app to a backend service for reliable record management.",
-    ],
+  //   highlights: [
+  //     "Built a mobile workflow for reporting lost and found items.",
+  //     "Created an accessible interface for tracking item status.",
+  //     "Connected the app to a backend service for reliable record management.",
+  //   ],
 
-    features: [
-      "Report lost items",
-      "Record found items",
-      "Track item status",
-      "Mobile interface",
-      "API integration",
-    ],
+  //   features: [
+  //     "Report lost items",
+  //     "Record found items",
+  //     "Track item status",
+  //     "Mobile interface",
+  //     "API integration",
+  //   ],
 
-    status: "Live",
-  },
+  //   status: "Live",
+  // },
 
   // =========================================================
   // AUTOMATION / PYTHON
@@ -670,18 +638,12 @@ export const links: Project[] = [
 
     github: "/github.jpg",
 
-    stacks: [
-      "Python",
-      "NumPy",
-      "argparse",
-      "Command-line Automation",
-    ],
+    stacks: ["Python", "NumPy", "argparse", "Command-line Automation"],
 
     tagline: "A Python-based command-line tool for automated log processing.",
     description:
       "LOGFORGE is a Python automation project built to process and organize log data through a command-line interface. It uses Python libraries to support efficient data handling and configurable automation workflows.",
-    role:
-      "Designed and developed the automation workflow, command-line interface, data processing logic, and project structure.",
+    role: "Designed and developed the automation workflow, command-line interface, data processing logic, and project structure.",
 
     highlights: [
       "Built a Python-based automation tool for log processing.",

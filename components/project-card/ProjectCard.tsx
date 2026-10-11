@@ -50,7 +50,7 @@ const ProjectCard = ({
     <article
       key={item.slug}
       data-project-card
-      className={`group relative bg-cream-light/15 glass backdrop-blur-3xl border rounded-xl ${
+      className={`group relative bg-cream-light/15 glass backdrop-blur-3xl rounded-xl ${
         projectIndex % 2 !== 0 ? "md:translate-y-16" : ""
       }`}
     >

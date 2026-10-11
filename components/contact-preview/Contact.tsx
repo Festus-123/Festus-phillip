@@ -128,7 +128,7 @@ const Contact = () => {
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-16 flex flex-col gap-8 border-b border-white/15 pb-10 md:mb-20 md:flex-row md:items-end md:justify-between">
-          <div>
+          <div className="w-full max-w-3xl">
             <p className="mb-6 font-satoshi text-sm font-bold uppercase tracking-[0.25em] text-gold">
               Send Me a dm
             </p>
