@@ -43,9 +43,3 @@ next-env.d.ts
 # 3d
 */3d
 *.glb
-
-# fonts
-/public/assets/fonts/Satoshi_Complete/*
-/public/assets/fonts/GeneralSans_Complete/*
-
-
