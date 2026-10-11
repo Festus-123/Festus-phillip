@@ -145,20 +145,20 @@ const Contact = () => {
 
           <div className="flex flex-col items-center gap-6 md:gap-10">
             {/* image */}
-            <div className="rounded-full border-2 border-cream p-4">
+            <div className="rounded-full border-2 border-cream p-2 md:p-4">
               <Image
                 src={assets.footer}
                 alt="Contact"
                 width={500}
                 height={500}
-                className="h-32 w-32 rounded-full object-cover md:h-40 md:w-40 lg:h-48 lg:w-48 grayscale"
+                className="h-36 w-36 rounded-full object-cover md:h-40 md:w-40 lg:h-48 lg:w-48 grayscale"
               />
             </div>
-
-            <p className="max-w-xs font-general text-sm leading-6 text-white/60">
+{/* 
+            <p className="hidden max-w-xs font-general text-sm leading-6 text-white/60">
               Have a project, idea, or opportunity in mind? Tell me what
               you&apos;re working on and let&apos;s see where it goes.
-            </p>
+            </p> */}
           </div>
         </div>
 

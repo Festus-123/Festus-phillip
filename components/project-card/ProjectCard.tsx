@@ -190,12 +190,12 @@ const ProjectCard = ({
             {item.tagline}
           </p>
 
-          <button
+          {/* <button
             data-project-link
             className="hidden shrink-0 bg-gold p-3 rounded-lg cursor-pointer font-satoshi text-xs font-bold uppercase tracking-[0.15em] text-white sm:block"
           >
             Live Demo
-          </button>
+          </button> */}
         </div>
       </div>
     </article>

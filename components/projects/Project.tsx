@@ -88,8 +88,8 @@ const Project = () => {
       />
 
       {/* huge title */}
-      <div className="h-[90vh] sticky top-55 z-0 ">
-        <h1 className=" text-center font-satoshi text-[clamp(4em,12vw,12em)] font-extrabold uppercase leading-none tracking-[-0.06em] text-brand-gradient">
+      <div className="h-[60vh] md:h-[90vh] sticky top-55 z-0 ">
+        <h1 className=" text-center font-satoshi text-[clamp(6em,12vw,12em)] font-extrabold uppercase leading-none tracking-[-0.06em] text-brand-gradient">
           My Works
         </h1>
       </div>
@@ -175,7 +175,7 @@ const Project = () => {
               <span>More projects →</span>
 
               <Link
-                href="/contact"
+                href="#contact"
                 className="text-blue transition-colors hover:text-gold"
               >
                 Let&apos;s build something
