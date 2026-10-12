@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+import { assets } from '../public/assets/asset';
 export type ProjectType =
   | "frontend"
   | "backend"
@@ -11,7 +13,7 @@ export type ProjectStatus = "Live" | "In Development" | "Archived";
 export type Project = {
   slug: string;
   name: string;
-  image: string;
+  image: string | StaticImageData;
 
   type: ProjectType;
   category: string;
@@ -502,7 +504,7 @@ export const links: Project[] = [
   {
     slug: "medical-health-track",
     name: "Medical Health Track",
-    image: "/project-image.png",
+    image: assets.medicalHealthTrack,
 
     type: "mobile",
     category: "Mobile Application",
@@ -539,7 +541,7 @@ export const links: Project[] = [
   {
     slug: "reminder-app",
     name: "Reminder App",
-    image: "/project-image.png",
+    image: assets.remindersApp,
 
     type: "mobile",
     category: "Mobile Application",
@@ -627,11 +629,11 @@ export const links: Project[] = [
 
   // I prefer "Automation" as the project type rather than
   // "Python", because Python is the technology, not the purpose.
-  //
+//
   {
     slug: "logforge",
     name: "LOGFORGE",
-    image: "/project-image.png",
+    image: assets.logforge,
 
     type: "automation",
     category: "Automation",

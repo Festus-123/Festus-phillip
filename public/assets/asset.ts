@@ -17,6 +17,10 @@ import typescript from "./images/typescript.jpg";
 import javascript from "./images/javascript.jpg";
 import tailwind from "./images/tailwind.png";
 import express from "./images/expresss.png";
+
+import logforge from "./images/logforge.png";
+import medicalHealthTrack from "./images/medical-health-track.png";
+import remindersApp from "./images/reminders-app.png";
 // import { StaticImageData } from "next/image";
 
 // type ASSETS = {
@@ -45,4 +49,8 @@ export const assets = {
      globe, 
      next,
      vercel,
+
+     logforge,
+     medicalHealthTrack,
+     remindersApp,
 }
