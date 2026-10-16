@@ -44,7 +44,7 @@ export const dirItems: DirItem[] = [
   {
     id: "resume",
     label: "Resume",
-    href: "https://drive.google.com/file/d/14z9tkaJtv9_S3YpeBowFO5kl3Ph0xuAG/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1jy9QRr-_qI9bjnVs5-usAR3xcEfTBWVT/view?usp=sharing",
     icon: FileText,
   },
   {
