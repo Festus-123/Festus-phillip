@@ -1,5 +1,5 @@
-import { StaticImageData } from 'next/image';
-import { assets } from '../public/assets/asset';
+import { StaticImageData } from "next/image";
+import { assets } from "../public/assets/asset";
 export type ProjectType =
   | "frontend"
   | "backend"
@@ -81,54 +81,132 @@ export const links: Project[] = [
   // =========================================================
 
   {
-    slug: "tax-master",
-    name: "Tax Master",
-    image: "/tax-master.png",
+    slug: "deexclusive-music-organisation",
+    name: "DeExclusive Music Organisation",
+    image: "/dmo.png",
 
     type: "frontend",
-    category: "Web Application",
+    category: "Music Organisation Website",
     year: "2025",
 
-    site: "https://tax-master.vercel.app/",
-    github_site: "https://github.com/Festus-123/Tax-Master",
+    site: "https://de-exclusives-music-organization.vercel.app/",
+    github_site:
+      "https://github.com/Festus-123/DeExclusives-Music-Organization",
     github: "/github.jpg",
 
-    stacks: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "html2image",
-      "Sonner",
-      "Responsive UI",
-    ],
+    stacks: ["Zod", "Framer Motion", "Next.js", "Tailwind CSS", "shadcn/ui"],
 
-    tagline:
-      "Making tax calculations less intimidating and easier to understand.",
+    tagline: "A vibrant digital home for DeExclusive Music Organisation.",
 
     description:
-      "Tax Master is a Nigerian tax estimation tool built to make tax calculations easier for everyday users. Instead of forcing users through complicated formulas, the application turns the process into a simple guided experience where users provide their financial information and receive an understandable estimate of their tax obligations.",
+      "A website for DeExclusive Music Organisation, showcasing its music, brand, and offerings through a polished, responsive interface with engaging motion.",
 
-    role: "Designed and developed the frontend, calculation flow, responsive interface, result presentation, and user interaction system.",
+    role: "Designed and developed the organisation's responsive web experience, content presentation, and animated interactions.",
 
     highlights: [
-      "Built the tax calculation logic around the 2026 Nigerian tax rules used by the application.",
-      "Designed a guided interface that breaks down a potentially complicated calculation into manageable steps.",
-      "Created clear result displays so users can understand where their estimated figures come from.",
-      "Built a responsive experience that works comfortably across desktop and mobile screens.",
+      "Created a branded online presence for DeExclusive Music Organisation.",
+      "Used Framer Motion to add engaging animations and interactive details.",
+      "Built responsive layouts for browsing across desktop and mobile screens.",
     ],
 
     features: [
-      "Tax estimation",
-      "Interactive calculation flow",
-      "Detailed tax breakdown",
+      "Music organisation showcase",
       "Responsive interface",
-      "Result sharing/export",
-      "User-friendly notifications",
+      "Framer Motion animations",
+      "shadcn/ui components",
     ],
 
     status: "Live",
   },
+
+  {
+    slug: "cad-designer-portfolio",
+    name: "CAD Designer Portfolio",
+    image: "/samuelphillip.png",
+
+    type: "frontend",
+    category: "Portfolio Website",
+    year: "2025",
+
+    site: "https://samuelphillip.vercel.app/",
+    github_site: "https://github.com/Festus-123/samuel-phillip",
+    github: "/github.jpg",
+
+    stacks: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Responsive UI"],
+
+    tagline:
+      "A polished portfolio showcasing CAD design work and creative expertise.",
+
+    description:
+      "A portfolio website for Samuel Phillip, presenting CAD design projects, skills, and professional experience through a polished, responsive interface with animated interactions.",
+
+    role: "Designed and developed the portfolio experience, responsive layouts, project presentation, and animated interactions.",
+
+    highlights: [
+      "Created a dedicated showcase for CAD design projects and professional capabilities.",
+      "Used GSAP to bring polished motion and interactive details to the experience.",
+      "Built responsive layouts for comfortable browsing across desktop and mobile screens.",
+    ],
+
+    features: [
+      "CAD project showcase",
+      "Responsive portfolio interface",
+      "GSAP animations",
+      "Professional profile and skills",
+    ],
+
+    status: "Live",
+  },
+
+  // {
+  //   slug: "tax-master",
+  //   name: "Tax Master",
+  //   image: "/tax-master.png",
+
+  //   type: "frontend",
+  //   category: "Web Application",
+  //   year: "2025",
+
+  //   site: "https://tax-master.vercel.app/",
+  //   github_site: "https://github.com/Festus-123/Tax-Master",
+  //   github: "/github.jpg",
+
+  //   stacks: [
+  //     "React.js",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Vite",
+  //     "html2image",
+  //     "Sonner",
+  //     "Responsive UI",
+  //   ],
+
+  //   tagline:
+  //     "Making tax calculations less intimidating and easier to understand.",
+
+  //   description:
+  //     "Tax Master is a Nigerian tax estimation tool built to make tax calculations easier for everyday users. Instead of forcing users through complicated formulas, the application turns the process into a simple guided experience where users provide their financial information and receive an understandable estimate of their tax obligations.",
+
+  //   role: "Designed and developed the frontend, calculation flow, responsive interface, result presentation, and user interaction system.",
+
+  //   highlights: [
+  //     "Built the tax calculation logic around the 2026 Nigerian tax rules used by the application.",
+  //     "Designed a guided interface that breaks down a potentially complicated calculation into manageable steps.",
+  //     "Created clear result displays so users can understand where their estimated figures come from.",
+  //     "Built a responsive experience that works comfortably across desktop and mobile screens.",
+  //   ],
+
+  //   features: [
+  //     "Tax estimation",
+  //     "Interactive calculation flow",
+  //     "Detailed tax breakdown",
+  //     "Responsive interface",
+  //     "Result sharing/export",
+  //     "User-friendly notifications",
+  //   ],
+
+  //   status: "Live",
+  // },
 
   {
     slug: "phipest-bens",
@@ -172,100 +250,149 @@ export const links: Project[] = [
     status: "Live",
   },
 
+  // {
+  //   slug: "weslime-auto-repair",
+  //   name: "Weslime Auto Repair",
+  //   image: "/weslime.png",
+
+  //   type: "frontend",
+  //   category: "Business Website",
+  //   year: "2026",
+
+  //   site: "https://weslime.vercel.app/",
+  //   github_site: "https://github.com/Festus-123/weslime",
+  //   github: "/github.jpg",
+
+  //   stacks: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Responsive UI",
+  //     "Sonner",
+  //   ],
+
+  //   tagline: "A digital front door for an automotive service business.",
+
+  //   description:
+  //     "Weslime Auto Repair provides services ranging from vehicle repairs and car washing to car parts and other automotive needs. The website was built to give the business a professional online presence while making it easier for customers to discover available services and make enquiries.",
+
+  //   role: "Designed and developed the website structure, responsive interface, service sections, enquiry experience, and supporting interactions.",
+
+  //   highlights: [
+  //     "Organized several automotive services into a straightforward browsing experience.",
+  //     "Focused the interface around customer enquiries and appointment requests.",
+  //     "Built reusable responsive sections for service information and business content.",
+  //     "Kept the visual design clean so users can quickly find the information they need.",
+  //   ],
+
+  //   features: [
+  //     "Service catalogue",
+  //     "Appointment enquiries",
+  //     "Car repair services",
+  //     "Car wash services",
+  //     "Car parts information",
+  //     "Responsive design",
+  //     "Customer notifications",
+  //   ],
+
+  //   status: "Live",
+  // },
+
   {
-    slug: "weslime-auto-repair",
-    name: "Weslime Auto Repair",
-    image: "/weslime.png",
+    slug: "tacsfon-oaustech",
+    name: "Tacsfon OAUSTech",
+    image: "/tacsfon.png",
 
     type: "frontend",
-    category: "Business Website",
+    category: "Organization Website",
     year: "2026",
 
-    site: "https://weslime.vercel.app/",
-    github_site: "https://github.com/Festus-123/weslime",
+    site: "https://tacsfon-oaustech.vercel.app/",
+    github_site: "https://github.com/Festus-123/tacsfon_oaustech",
     github: "/github.jpg",
 
     stacks: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "Responsive UI",
-      "Sonner",
+      "Framer Motion",
+      "shadcn/ui",
+      "Zod",
     ],
 
-    tagline: "A digital front door for an automotive service business.",
+    tagline: "A modern digital platform for Tacsfon OAUSTech.",
 
     description:
-      "Weslime Auto Repair provides services ranging from vehicle repairs and car washing to car parts and other automotive needs. The website was built to give the business a professional online presence while making it easier for customers to discover available services and make enquiries.",
+      "Tacsfon OAUSTech is a modern web platform designed to present the organization online and make its information and services easier to discover.",
 
-    role: "Designed and developed the website structure, responsive interface, service sections, enquiry experience, and supporting interactions.",
+    role: "Designed and developed the website structure, responsive interface, content sections, and interactive user experience.",
 
     highlights: [
-      "Organized several automotive services into a straightforward browsing experience.",
-      "Focused the interface around customer enquiries and appointment requests.",
-      "Built reusable responsive sections for service information and business content.",
-      "Kept the visual design clean so users can quickly find the information they need.",
+      "Created a clear browsing experience for organizational information.",
+      "Built responsive sections to present key content and services.",
+      "Added interactive motion to enhance the user experience.",
+      "Used validated forms and reusable UI components.",
     ],
 
     features: [
-      "Service catalogue",
-      "Appointment enquiries",
-      "Car repair services",
-      "Car wash services",
-      "Car parts information",
+      "Organization information",
+      "Responsive content sections",
+      "Interactive animations",
+      "Form validation",
+      "Reusable UI components",
       "Responsive design",
-      "Customer notifications",
     ],
 
     status: "Live",
   },
 
-  {
-    slug: "coolchef-nationwide-eats",
-    name: "CoolChef Nationwide Eats",
-    image: "/coolchef.png",
 
-    type: "frontend",
-    category: "Food & Restaurant",
-    year: "2026",
+  // {
+  //   slug: "coolchef-nationwide-eats",
+  //   name: "CoolChef Nationwide Eats",
+  //   image: "/coolchef.png",
 
-    site: "https://coolchef-nationwide-eats.vercel.app/",
-    github_site: "https://github.com/Festus-123/coolchef-nationwide-eats",
-    github: "/github.jpg",
+  //   type: "frontend",
+  //   category: "Food & Restaurant",
+  //   year: "2026",
 
-    stacks: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Responsive UI",
-      "Sonner",
-    ],
+  //   site: "https://coolchef-nationwide-eats.vercel.app/",
+  //   github_site: "https://github.com/Festus-123/coolchef-nationwide-eats",
+  //   github: "/github.jpg",
 
-    tagline: "A food-focused experience built around discovering what to eat.",
+  //   stacks: [
+  //     "React.js",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Responsive UI",
+  //     "Sonner",
+  //   ],
 
-    description:
-      "CoolChef Nationwide Eats is a restaurant-focused website designed around food discovery and presentation. The interface brings recipes, dishes, and cooking content into one responsive experience, making it easy for visitors to browse meals and explore the content without unnecessary complexity.",
+  //   tagline: "A food-focused experience built around discovering what to eat.",
 
-    role: "Designed and developed the frontend experience, responsive layouts, recipe presentation, and interactive UI elements.",
+  //   description:
+  //     "CoolChef Nationwide Eats is a restaurant-focused website designed around food discovery and presentation. The interface brings recipes, dishes, and cooking content into one responsive experience, making it easy for visitors to browse meals and explore the content without unnecessary complexity.",
 
-    highlights: [
-      "Created a food-first interface where imagery and content work together.",
-      "Designed responsive recipe and dish layouts for different screen sizes.",
-      "Focused on clear navigation and readable food information.",
-      "Built reusable UI patterns for presenting different dishes and recipes.",
-    ],
+  //   role: "Designed and developed the frontend experience, responsive layouts, recipe presentation, and interactive UI elements.",
 
-    features: [
-      "Recipe browsing",
-      "Dish presentation",
-      "Cooking content",
-      "Responsive layouts",
-      "Interactive UI",
-      "Mobile-friendly experience",
-    ],
+  //   highlights: [
+  //     "Created a food-first interface where imagery and content work together.",
+  //     "Designed responsive recipe and dish layouts for different screen sizes.",
+  //     "Focused on clear navigation and readable food information.",
+  //     "Built reusable UI patterns for presenting different dishes and recipes.",
+  //   ],
 
-    status: "Live",
-  },
+  //   features: [
+  //     "Recipe browsing",
+  //     "Dish presentation",
+  //     "Cooking content",
+  //     "Responsive layouts",
+  //     "Interactive UI",
+  //     "Mobile-friendly experience",
+  //   ],
+
+  //   status: "Live",
+  // },
 
   // =========================================================
   // FULLSTACK / E-COMMERCE
@@ -378,6 +505,48 @@ export const links: Project[] = [
     status: "Live",
   },
 
+  {
+    slug: "academic-hub",
+    name: "Academic Hub",
+    image: "/academic-hub.png",
+
+    type: "fullstack",
+    category: "Education",
+    year: "2026",
+
+    site: "https://tacsfon-oaustech.vercel.app/academic",
+    github_site: "https://github.com/Festus-123/tacsfon_oaustech",
+    github: "/github.jpg",
+
+    stacks: ["Next.js", "Tailwind CSS", "Supabase", "Zod", "Paystack", "AI"],
+
+    tagline:
+      "An academic platform bringing learning resources and student services together.",
+
+    description:
+      "Academic Hub is an education-focused platform designed to help students access academic resources and services in one place. It combines a responsive interface with secure data handling, payments, and AI-powered features to support a more connected learning experience.",
+
+    role: "Designed and developed the platform experience, responsive layouts, academic resource workflows, and interactive features.",
+
+    highlights: [
+      "Created a centralized hub for academic resources and student services.",
+      "Designed responsive layouts for a range of screen sizes.",
+      "Integrated Supabase for data management and Paystack for payments.",
+      "Used Zod for validation and AI to support platform features.",
+    ],
+
+    features: [
+      "Academic resources",
+      "Student services",
+      "AI-powered features",
+      "Payment integration",
+      "Responsive layouts",
+      "Validated data workflows",
+    ],
+
+    status: "Live",
+  },
+
   // =========================================================
   // BACKEND
   // =========================================================
@@ -395,7 +564,14 @@ export const links: Project[] = [
     github_site: "https://github.com/Festus-123/reminders-api",
     github: "/github.jpg",
 
-    stacks: ["Node.js", "Express", "Javascript", "Neon-DB", "Railway", "Vitest"],
+    stacks: [
+      "Node.js",
+      "Express",
+      "Javascript",
+      "Neon-DB",
+      "Railway",
+      "Vitest",
+    ],
 
     tagline: "An API for creating and managing reminders.",
     description:
@@ -432,7 +608,14 @@ export const links: Project[] = [
     github_site: "https://github.com/Festus-123/TicketPass-api",
     github: "/github.jpg",
 
-    stacks: ["Node.js", "Express", "Javascript", "Neon-DB", "PostgressSQl", "SQLite"],
+    stacks: [
+      "Node.js",
+      "Express",
+      "Javascript",
+      "Neon-DB",
+      "PostgressSQl",
+      "SQLite",
+    ],
 
     tagline: "A backend for booking and managing event tickets.",
     description:
@@ -456,46 +639,42 @@ export const links: Project[] = [
     status: "Live",
   },
 
-  // {
-  //   slug: "campus-lost-and-found-api",
-  //   name: "Campus Lost & Found API",
-  //   image: "CLF",
+  {
+    slug: "kampuslf-api",
+    name: "KampusLF API",
+    image: "CLF",
 
-  //   type: "backend",
-  //   category: "REST API",
-  //   year: "2025",
+    type: "backend",
+    category: "REST API",
+    year: "2025",
 
-  //   github: "/github.jpg",
+    site: "",
+    github_site: "https://github.com/Festus-123/KampusLF-Api",
+    github: "/github.jpg",
 
-  //   stacks: [
-  //     "Node.js",
-  //     "Express",
-  //     "TypeScript",
-  //     "PostgreSQL",
-  //   ],
+    stacks: ["Node.js", "Express", "TypeScript", "PostgreSQL"],
 
-  //   tagline: "A backend for reporting and resolving lost campus items.",
-  //   description:
-  //     "Campus Lost & Found API is a backend service for reporting lost items, recording found items, and managing related records within a campus community. It provides a structured API for handling item reports and status updates.",
-  //   role:
-  //     "Designed and developed the API, reporting workflow, data model, and backend service logic.",
+    tagline: "A backend for reporting and resolving lost campus items.",
+    description:
+      "Campus Lost & Found API is a backend service for reporting lost items, recording found items, and managing related records within a campus community. It provides a structured API for handling item reports and status updates.",
+    role: "Designed and developed the API, reporting workflow, data model, and backend service logic.",
 
-  //   highlights: [
-  //     "Built an API for reporting lost and found items.",
-  //     "Supported structured records for item listings and updates.",
-  //     "Created a reusable backend workflow for campus item management.",
-  //   ],
+    highlights: [
+      "Built an API for reporting lost and found items.",
+      "Supported structured records for item listings and updates.",
+      "Created a reusable backend workflow for campus item management.",
+    ],
 
-  //   features: [
-  //     "Lost item reports",
-  //     "Found item records",
-  //     "Item status management",
-  //     "REST API",
-  //     "Database integration",
-  //   ],
+    features: [
+      "Lost item reports",
+      "Found item records",
+      "Item status management",
+      "REST API",
+      "Database integration",
+    ],
 
-  //   status: "Live",
-  // },
+    status: "Live",
+  },
 
   // =========================================================
   // MOBILE
@@ -556,7 +735,7 @@ export const links: Project[] = [
       "TypeScript",
       "Stylesheet",
       "AsyncStorage",
-      "React-hooks"
+      "React-hooks",
     ],
 
     tagline: "A mobile app for creating and managing reminders.",
@@ -581,47 +760,50 @@ export const links: Project[] = [
     status: "Live",
   },
 
-  // {
-  //   slug: "campus-lost-and-found-mobile",
-  //   name: "Campus Lost & Found",
-  //   image: "/project-image.png",
+  {
+    slug: "campus-lost-and-found-mobile",
+    name: "Campus Lost & Found",
+    image: "/kampuslf.png",
 
-  //   type: "mobile",
-  //   category: "Mobile Application",
-  //   year: "2025",
+    type: "mobile",
+    category: "Mobile Application",
+    year: "2025",
 
-  //   github: "/github.jpg",
+    site: "https://expo.dev/accounts/cruise_4you/projects/Mobile-app/builds/ba5057fe-579e-4f50-af3b-23b5e6273715",
+    github_site: "https://github.com/Festus-123/KampusLF",
+    github: "/github.jpg",
 
-  //   stacks: [
-  //     "React Native",
-  //     "Expo",
-  //     "TypeScript",
-  //     "NativeWind",
-  //     "REST API",
-  //   ],
 
-  //   tagline: "A mobile way to report and resolve lost campus items.",
-  //   description:
-  //     "Campus Lost & Found is a mobile application that allows users to report lost items, record found items, and follow the status of related cases within a campus community.",
-  //   role:
-  //     "Designed and developed the mobile interface, reporting workflow, item-status experience, and API integration.",
+    stacks: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "REST API",
+    ],
 
-  //   highlights: [
-  //     "Built a mobile workflow for reporting lost and found items.",
-  //     "Created an accessible interface for tracking item status.",
-  //     "Connected the app to a backend service for reliable record management.",
-  //   ],
+    tagline: "A mobile way to report and resolve lost campus items.",
+    description:
+      "Campus Lost & Found is a mobile application that allows users to report lost items, record found items, and follow the status of related cases within a campus community.",
+    role:
+      "Designed and developed the mobile interface, reporting workflow, item-status experience, and API integration.",
 
-  //   features: [
-  //     "Report lost items",
-  //     "Record found items",
-  //     "Track item status",
-  //     "Mobile interface",
-  //     "API integration",
-  //   ],
+    highlights: [
+      "Built a mobile workflow for reporting lost and found items.",
+      "Created an accessible interface for tracking item status.",
+      "Connected the app to a backend service for reliable record management.",
+    ],
 
-  //   status: "Live",
-  // },
+    features: [
+      "Report lost items",
+      "Record found items",
+      "Track item status",
+      "Mobile interface",
+      "API integration",
+    ],
+
+    status: "Live",
+  },
 
   // =========================================================
   // AUTOMATION / PYTHON
@@ -629,41 +811,42 @@ export const links: Project[] = [
 
   // I prefer "Automation" as the project type rather than
   // "Python", because Python is the technology, not the purpose.
-//
-  {
-    slug: "logforge",
-    name: "LOGFORGE",
-    image: assets.logforge,
+  //
 
-    type: "automation",
-    category: "Automation",
-    year: "2025",
+  // {
+  //   slug: "logforge",
+  //   name: "LOGFORGE",
+  //   image: assets.logforge,
 
-    github: "/github.jpg",
+  //   type: "automation",
+  //   category: "Automation",
+  //   year: "2025",
 
-    stacks: ["Python", "NumPy", "argparse", "Command-line Automation"],
+  //   github: "/github.jpg",
 
-    tagline: "A Python-based command-line tool for automated log processing.",
-    description:
-      "LOGFORGE is a Python automation project built to process and organize log data through a command-line interface. It uses Python libraries to support efficient data handling and configurable automation workflows.",
-    role: "Designed and developed the automation workflow, command-line interface, data processing logic, and project structure.",
+  //   stacks: ["Python", "NumPy", "argparse", "Command-line Automation"],
 
-    highlights: [
-      "Built a Python-based automation tool for log processing.",
-      "Used argparse to create a flexible command-line interface.",
-      "Used NumPy for efficient numerical data handling and processing.",
-    ],
+  //   tagline: "A Python-based command-line tool for automated log processing.",
+  //   description:
+  //     "LOGFORGE is a Python automation project built to process and organize log data through a command-line interface. It uses Python libraries to support efficient data handling and configurable automation workflows.",
+  //   role: "Designed and developed the automation workflow, command-line interface, data processing logic, and project structure.",
 
-    features: [
-      "Log processing",
-      "Command-line interface",
-      "Python automation",
-      "NumPy integration",
-      "Configurable workflows",
-    ],
+  //   highlights: [
+  //     "Built a Python-based automation tool for log processing.",
+  //     "Used argparse to create a flexible command-line interface.",
+  //     "Used NumPy for efficient numerical data handling and processing.",
+  //   ],
 
-    status: "Live",
-  },
+  //   features: [
+  //     "Log processing",
+  //     "Command-line interface",
+  //     "Python automation",
+  //     "NumPy integration",
+  //     "Configurable workflows",
+  //   ],
+
+  //   status: "Live",
+  // },
 
   // =========================================================
   // EXPERIMENTS
