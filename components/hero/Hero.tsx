@@ -23,6 +23,7 @@ const Hero = () => {
 
       textReveal(headingRef.current, {
         variant: "line",
+        scroll: false,
       });
 
       heroTimeline.play();

@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { textRevealVariant } from "./textRevealVariant";
+import { createScrollTrigger, type ScrollOption } from "../scroll/scrollTrigger";
 
 gsap.registerPlugin(SplitText);
 
@@ -8,13 +9,19 @@ type TextRevealOptions = {
   variant?: keyof typeof textRevealVariant;
   delay?: number;
   ease?: string;
+  scroll?: ScrollOption;
 };
 
 export function textReveal(
   target: HTMLElement,
   options: TextRevealOptions = {},
 ) {
-  const { variant = "line", delay = 0, ease = "power3.out" } = options;
+  const {
+    variant = "line",
+    delay = 0,
+    ease = "power3.out",
+    scroll = true,
+  } = options;
 
   const config = textRevealVariant[variant];
 
@@ -34,6 +41,7 @@ export function textReveal(
           stagger: config.stagger,
           delay,
           ease,
+          scrollTrigger: createScrollTrigger(target, scroll),
         },
       );
     },

@@ -121,6 +121,7 @@ const Introduction = () => {
       imageReveal(panelContainerRef.current, {
         variant: "left",
         maskColor: "var(--color-blue)",
+        scroll: false,
       });
     });
   };

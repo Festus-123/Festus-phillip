@@ -1,9 +1,11 @@
 import gsap from "gsap";
 import { fadeInVariant } from "./fadeInVariant";
+import { createScrollTrigger, type ScrollOption } from "../scroll/scrollTrigger";
 
 type FadeInOptions = {
   variant?: keyof typeof fadeInVariant;
   delay?: number;
+  scroll?: ScrollOption;
 };
 
 export function fadeIn(
@@ -13,6 +15,7 @@ export function fadeIn(
   const {
     variant = "default",
     delay = 0,
+    scroll = true,
   } = options;
 
   const config = fadeInVariant[variant];
@@ -22,5 +25,9 @@ export function fadeIn(
     duration: config.duration,
     ease: config.ease,
     delay,
+    scrollTrigger: createScrollTrigger(
+      Array.isArray(target) ? target[0] : target,
+      scroll,
+    ),
   });
 }

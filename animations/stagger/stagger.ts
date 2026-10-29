@@ -1,9 +1,11 @@
 import gsap from "gsap";
 import { staggerVariant } from "./staggerVariant";
+import { createScrollTrigger, type ScrollOption } from "../scroll/scrollTrigger";
 
 type StaggerOptions = {
   variant?: keyof typeof staggerVariant;
   opacity?: boolean;
+  scroll?: ScrollOption;
 };
 
 export function stagger(
@@ -13,6 +15,7 @@ export function stagger(
   const {
     variant = "default",
     opacity = true,
+    scroll = true,
   } = options;
 
   const config = staggerVariant[variant];
@@ -23,5 +26,9 @@ export function stagger(
     duration: config.duration,
     stagger: config.stagger,
     ease: config.ease,
+    scrollTrigger: createScrollTrigger(
+      (targets as ArrayLike<HTMLElement>)[0],
+      scroll,
+    ),
   });
 }

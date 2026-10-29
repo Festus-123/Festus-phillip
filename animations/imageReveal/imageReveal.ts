@@ -1,16 +1,22 @@
 import gsap from "gsap";
 import { imageRevealVariant } from "./imageRevealVariant";
+import { createScrollTrigger, type ScrollOption } from "../scroll/scrollTrigger";
 
 type ImageRevealOptions = {
   variant?: keyof typeof imageRevealVariant;
   maskColor?: string;
+  scroll?: ScrollOption;
 };
 
 export function imageReveal(
   container: HTMLElement,
   options: ImageRevealOptions = {},
 ) {
-  const { variant = "left", maskColor = "var(--color-blue)" } = options;
+  const {
+    variant = "left",
+    maskColor = "var(--color-blue)",
+    scroll = true,
+  } = options;
 
   const config = imageRevealVariant[variant];
 
@@ -51,7 +57,9 @@ export function imageReveal(
     scale: 1.08,
   });
 
-  const timeline = gsap.timeline();
+  const timeline = gsap.timeline({
+    scrollTrigger: createScrollTrigger(container, scroll),
+  });
 
   timeline
     .to(mask, {
